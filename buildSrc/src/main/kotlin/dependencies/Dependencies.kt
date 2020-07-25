@@ -28,9 +28,7 @@ const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0"
 const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 
-const val CONTENTPAGER = "androidx.contentpager:contentpager:1.0.0-rc01"
 const val WEBKIT = "androidx.webkit:webkit:1.0.0"
-const val MEDIA2 = "androidx.media2:media2:1.0.0-alpha04"
 
 const val MATERIAL = "com.google.android.material:material:1.2.0-alpha05"
 const val PAGING = "androidx.paging:paging-runtime:2.1.0"
@@ -55,14 +53,6 @@ const val SAVEDSTATE = "androidx.savedstate:savedstate:1.0.0-alpha02"
 const val SAVEDSTATE_VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha01"
 
 const val VIEWPAGER2 = "androidx.viewpager2:viewpager2:1.0.0"
-
-const val RECOMMENDATION = "androidx.recommendation:recommendation:1.0.0"
-
-const val PREFERENCE = "androidx.preference:preference-ktx:1.1.0-alpha03"
-
-const val MULTIDEX = "androidx.multidex:multidex:2.0.0"
-
-const val RXWEBVIEW = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.3.0"
 
 const val RXJAVA = "io.reactivex.rxjava2:rxjava:2.2.0"
 const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"
