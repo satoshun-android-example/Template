@@ -57,6 +57,9 @@ dependencies {
   implementation NAVIGATION_FRAGMENT
   implementation NAVIGATION_UI
 
+  implementation DAGGER_RUNTIME
+  kapt DAGGER_COMPILER
+
   testImplementation JUNIT
 
   androidTestImplementation TEST_RUNNER

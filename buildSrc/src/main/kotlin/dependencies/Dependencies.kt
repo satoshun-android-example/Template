@@ -64,12 +64,9 @@ const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 
-private const val VDAGGER = "2.25.4"
+private const val VDAGGER = "2.29"
 const val DAGGER_RUNTIME = "com.google.dagger:dagger:$VDAGGER"
 const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$VDAGGER"
-const val DAGGER_ANDROID_RUNTIME = "com.google.dagger:dagger-android:$VDAGGER"
-const val DAGGER_ANDROID_COMPILER = "com.google.dagger:dagger-android-processor:$VDAGGER"
-const val DAGGER_ANDROID_SUPPORT_RUNTIME = "com.google.dagger:dagger-android-support:$VDAGGER"
 
 const val GLIDE = "com.github.bumptech.glide:glide:4.9.0"
 const val COIL = "io.coil-kt:coil:0.9.5"
