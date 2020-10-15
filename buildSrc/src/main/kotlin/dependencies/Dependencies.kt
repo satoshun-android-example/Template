@@ -4,24 +4,24 @@ const val COMPILE_SDK = 29
 const val MIN_SDK = 21
 const val TARGET_SDK = 29
 
-private const val VKOTLIN = "1.4.0"
+private const val VKOTLIN = "1.4.10"
 private const val VNAVIGATION = "2.2.0"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.0.1"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.1.0"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN = "androidx.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
-private const val VCOUROUTINE = "1.3.4"
+private const val VCOUROUTINE = "1.3.9"
 const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib:$VKOTLIN"
 const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VCOUROUTINE"
 const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOUROUTINE"
 
 const val KTX = "androidx.core:core-ktx:1.3.1"
-const val ACTIVITYX = "androidx.activity:activity-ktx:1.2.0-alpha08"
-const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.3.0-alpha08"
+const val ACTIVITYX = "androidx.activity:activity-ktx:1.2.0-beta01"
+const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.3.0-beta01"
 
-const val LIFECYCLE_RUNTIME = "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha04"
+const val LIFECYCLE_RUNTIME = "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
 
 const val APPCOMPAT = "androidx.appcompat:appcompat:1.2.0"
 const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0"
@@ -38,10 +38,10 @@ const val NAVIGATION = "androidx.navigation:navigation-common-ktx:$VNAVIGATION"
 const val NAVIGATION_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:$VNAVIGATION"
 const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:$VNAVIGATION"
 
-const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
-const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0"
-const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.0.0"
-const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.1.0"
+const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.2.0"
+const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
 const val EMOJI = "androidx.emoji:emoji:1.0.0"
 const val EMOJI_COMPAT = "androidx.emoji:emoji-appcompat:1.0.0"
@@ -60,11 +60,11 @@ const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"
 const val GROUPIE = "com.xwray:groupie:2.6.0"
 const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:2.6.0"
 
-const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
+const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0"
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 
-private const val VDAGGER = "2.29"
+private const val VDAGGER = "2.29.1"
 const val DAGGER_RUNTIME = "com.google.dagger:dagger:$VDAGGER"
 const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$VDAGGER"
 
