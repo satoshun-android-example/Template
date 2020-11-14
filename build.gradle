@@ -3,6 +3,7 @@ import static dependencies.DependenciesKt.*
 buildscript {
   repositories {
     google()
+    mavenCentral()
     jcenter()
   }
   dependencies {
@@ -10,12 +11,14 @@ buildscript {
     classpath KOTLIN_PLUGIN
     classpath VERSIONS_PLUGIN
     classpath SAFEARGS_PLUGIN
+    classpath DAGGER_HILT_PLUGIN
   }
 }
 
 allprojects {
   repositories {
     google()
+    mavenCentral()
     jcenter()
   }
 

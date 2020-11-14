@@ -25,7 +25,7 @@ const val LIFECYCLE_RUNTIME = "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
 
 const val APPCOMPAT = "androidx.appcompat:appcompat:1.2.0"
 const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0"
-const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.1"
+const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.4"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 
 const val WEBKIT = "androidx.webkit:webkit:1.0.0"
@@ -64,9 +64,14 @@ const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 
-private const val VDAGGER = "2.29"
+private const val VDAGGER = "2.29.1"
 const val DAGGER_RUNTIME = "com.google.dagger:dagger:$VDAGGER"
 const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$VDAGGER"
+
+private const val VDAGGER_HILT = "2.29.1-alpha"
+const val DAGGER_HILT = "com.google.dagger:hilt-android:$VDAGGER_HILT"
+const val DAGGER_HILT_COMPILER = "com.google.dagger:hilt-compiler:$VDAGGER_HILT"
+const val DAGGER_HILT_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:$VDAGGER_HILT"
 
 const val GLIDE = "com.github.bumptech.glide:glide:4.9.0"
 const val COIL = "io.coil-kt:coil:0.9.5"

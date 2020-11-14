@@ -4,6 +4,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
   compileSdkVersion COMPILE_SDK
@@ -60,8 +61,15 @@ dependencies {
   implementation DAGGER_RUNTIME
   kapt DAGGER_COMPILER
 
+  implementation DAGGER_HILT
+  kapt DAGGER_HILT_COMPILER
+
   testImplementation JUNIT
 
   androidTestImplementation TEST_RUNNER
   androidTestImplementation ESPRESSO
+}
+
+kapt {
+  correctErrorTypes true
 }
