@@ -38,10 +38,10 @@ const val NAVIGATION = "androidx.navigation:navigation-common-ktx:$VNAVIGATION"
 const val NAVIGATION_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:$VNAVIGATION"
 const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:$VNAVIGATION"
 
-const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
-const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0"
-const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.0.0"
-const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.1.0"
+const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.2.0"
+const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
 const val EMOJI = "androidx.emoji:emoji:1.0.0"
 const val EMOJI_COMPAT = "androidx.emoji:emoji-appcompat:1.0.0"
@@ -60,7 +60,7 @@ const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"
 const val GROUPIE = "com.xwray:groupie:2.6.0"
 const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:2.6.0"
 
-const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
+const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0"
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 
