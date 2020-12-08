@@ -4,7 +4,7 @@ const val COMPILE_SDK = 30
 const val MIN_SDK = 21
 const val TARGET_SDK = 30
 
-private const val VKOTLIN = "1.4.10"
+private const val VKOTLIN = "1.4.21"
 private const val VNAVIGATION = "2.3.1"
 
 const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.1.1"
@@ -17,9 +17,9 @@ const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib:$VKOTLIN"
 const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VCOUROUTINE"
 const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOUROUTINE"
 
-const val KTX = "androidx.core:core-ktx:1.3.1"
-const val ACTIVITYX = "androidx.activity:activity-ktx:1.2.0-beta01"
-const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.3.0-beta01"
+const val KTX = "androidx.core:core-ktx:1.3.2"
+const val ACTIVITYX = "androidx.activity:activity-ktx:1.2.0-beta02"
+const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.3.0-beta02"
 
 const val LIFECYCLE_RUNTIME = "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
 
