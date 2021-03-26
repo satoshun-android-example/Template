@@ -38,7 +38,7 @@ android {
 }
 
 dependencies {
-  implementation KOTLIN
+  implementation libs.bundles.kotlinAndroid
 
   implementation MATERIAL
   implementation APPCOMPAT
