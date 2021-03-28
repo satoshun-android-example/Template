@@ -2,10 +2,69 @@
 kotlin = "1.4.31"
 kotlin_coroutine = "1.4.1"
 
+android_navigation = "2.3.4"
+android_dagger = "2.33"
+android_dagger_hilt = "2.33-beta"
+
 [libraries]
-kotlin-stdlib =  { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+android-plugin = { module = "com.android.tools.build:gradle", version = "4.1.2" }
+
+android-navigation-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "android_navigation" }
+android-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "android_navigation" }
+android-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "android_navigation" }
+
+android-dagger-hilt-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "android_dagger_hilt" }
+android-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "android_dagger_hilt" }
+android-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "android_dagger_hilt" }
+
+android-material = { module = "com.google.android.material:material", version = "1.3.0" }
+android-core-ktx = { module = "androidx.core:core-ktx", version = "1.3.2" }
+android-compat = { module = "androidx.appcompat:appcompat", version = "1.2.0" }
+android-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version = "2.0.4" }
+android-fragment = { module = "androidx.fragment:fragment-ktx", version = "1.3.2" }
+android-activity = { module = "androidx.activity:activity-ktx", version = "1.2.2" }
+
+android-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.3.1" }
+android-lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version = "2.3.1" }
+android-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.3.1" }
+
+android-test-truth = { module = "com.google.truth:truth", version = "1.0.0" }
+android-test-runner = { module = "androidx.test:runner", version = "1.1.1" }
+android-test-espresso = { module = "androidx.test.espresso:espresso-core", version = "3.1.1" }
+
+android-coil = { module = "io.coil-kt:coil", version = "1.1.1" }
+
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
 kotlin-coroutine-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin_coroutine" }
 kotlin-coroutine-ui = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlin_coroutine" }
 
+junit = { module = "junit:junit", version = "4.13-beta-1" }
+
 [bundles]
 kotlin-android = ["kotlin-stdlib", "kotlin-coroutine-core", "kotlin-coroutine-ui"]
+android-ui = [
+    "android-navigation-fragment",
+    "android-navigation-ui",
+
+    "android-material",
+    "android-compat",
+    "android-constraintlayout",
+    "android-core-ktx",
+    "android-fragment",
+    "android-activity",
+
+    "android-lifecycle-runtime",
+    "android-lifecycle-livedata",
+    "android-lifecycle-viewmodel",
+
+    "android-coil"
+]
+test = [
+    "junit"
+]
+android-test = [
+    "android-test-runner",
+    "android-test-espresso"
+]
