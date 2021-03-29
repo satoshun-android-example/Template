@@ -2,7 +2,6 @@ plugins {
   id 'com.android.application'
   id 'kotlin-android'
   id 'kotlin-kapt'
-  id 'androidx.navigation.safeargs.kotlin'
   id 'dagger.hilt.android.plugin'
 }
 
@@ -30,8 +29,12 @@ android {
   kotlinOptions {
     jvmTarget = '1.8'
   }
-  viewBinding {
-    enabled = true
+
+  buildFeatures {
+    compose true
+  }
+  composeOptions {
+    kotlinCompilerExtensionVersion "1.0.0-beta02"
   }
 }
 
