@@ -7,7 +7,7 @@ android_dagger_hilt = "2.33-beta"
 android_compose = "1.0.0-beta03"
 
 [libraries]
-android-plugin = { module = "com.android.tools.build:gradle", version = "7.0.0-alpha12" }
+android-plugin = { module = "com.android.tools.build:gradle", version = "7.0.0-alpha14" }
 
 android-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "android_compose" }
 android-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "android_compose" }
