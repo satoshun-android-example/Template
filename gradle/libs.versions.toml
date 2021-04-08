@@ -4,7 +4,7 @@ kotlin_coroutine = "1.4.1"
 
 android_dagger = "2.33"
 android_dagger_hilt = "2.33-beta"
-android_compose = "1.0.0-beta02"
+android_compose = "1.0.0-beta03"
 
 [libraries]
 android-plugin = { module = "com.android.tools.build:gradle", version = "7.0.0-alpha12" }
