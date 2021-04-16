@@ -39,15 +39,15 @@ android {
 }
 
 dependencies {
-  implementation libs.bundles.kotlinAndroid
-  implementation libs.bundles.androidUi
+  implementation libs.bundles.kotlin.android
+  implementation libs.bundles.android.ui
 
   implementation libs.android.dagger.hilt.android
   kapt libs.android.dagger.hilt.compiler
 
   testImplementation libs.bundles.test
 
-  androidTestImplementation libs.bundles.androidTest
+  androidTestImplementation libs.bundles.android.test
 }
 
 kapt {
