@@ -2,11 +2,11 @@
 kotlin = "1.4.32"
 kotlincoroutines = "1.4.1"
 
-daggerhilt = "2.34-beta"
+daggerhilt = "2.35.1"
 compose = "1.0.0-beta05"
 
 [libraries]
-android-plugin = "com.android.tools.build:gradle:7.0.0-alpha14"
+android-plugin = "com.android.tools.build:gradle:7.0.0-alpha15"
 
 android-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 android-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compose" }
