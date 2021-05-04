@@ -1,4 +1,4 @@
-package com.github.satoshun.example
+package io.github.satoshun.example
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

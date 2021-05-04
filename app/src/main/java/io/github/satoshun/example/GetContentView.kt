@@ -1,4 +1,4 @@
-package com.github.satoshun.example
+package io.github.satoshun.example
 
 import android.app.Activity
 import android.view.ViewGroup
