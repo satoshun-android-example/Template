@@ -3,7 +3,7 @@ kotlin = "1.4.32"
 kotlincoroutines = "1.4.1"
 
 daggerhilt = "2.35.1"
-compose = "1.0.0-beta05"
+compose = "1.0.0-beta06"
 
 [libraries]
 android-plugin = "com.android.tools.build:gradle:7.0.0-alpha15"
@@ -37,7 +37,7 @@ android-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
 android-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
 android-lifecycle-viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
 
-android-test-truth = "com.google.truth:truth:1.0.0"
+android-test-truth = "com.google.truth:truth:1.1.2"
 android-test-runner = "androidx.test:runner:1.1.1"
 android-test-espresso = "androidx.test.espresso:espresso-core:3.1.1"
 
