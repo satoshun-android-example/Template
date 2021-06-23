@@ -27,11 +27,10 @@ android-dagger-hilt-android = { module = "com.google.dagger:hilt-android", versi
 android-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "daggerhilt" }
 
 android-material = "com.google.android.material:material:1.3.0"
-android-core-ktx = "androidx.core:core-ktx:1.3.2"
-android-compat = "androidx.appcompat:appcompat:1.2.0"
-android-constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.4"
-android-fragment = "androidx.fragment:fragment-ktx:1.3.2"
-android-activity = "androidx.activity:activity-ktx:1.2.2"
+android-core-ktx = "androidx.core:core-ktx:1.5.0"
+android-compat = "androidx.appcompat:appcompat:1.3.0"
+android-fragment = "androidx.fragment:fragment-ktx:1.3.3"
+android-activity = "androidx.activity:activity-ktx:1.2.3"
 
 android-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
 android-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
