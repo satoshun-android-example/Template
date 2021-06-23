@@ -2,7 +2,7 @@
 kotlin = "1.5.10"
 kotlincoroutines = "1.5.0"
 
-daggerhilt = "2.36"
+daggerhilt = "2.37"
 compose = "1.0.0-beta09"
 
 [libraries]
@@ -17,10 +17,10 @@ android-compose-foundation-core = { module = "androidx.compose.foundation:founda
 android-compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout", version.ref = "compose" }
 android-compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
 android-compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
-android-compose-activity = "androidx.activity:activity-compose:1.3.0-beta01"
-android-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha02"
+android-compose-activity = "androidx.activity:activity-compose:1.3.0-beta02"
+android-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha03"
 
-android-hilt-navigation-compose = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha02"
+android-hilt-navigation-compose = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha03"
 
 android-dagger-hilt-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "daggerhilt" }
 android-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "daggerhilt" }
