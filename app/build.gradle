@@ -40,6 +40,12 @@ android {
   composeOptions {
     kotlinCompilerExtensionVersion libs.versions.compose.get()
   }
+
+  testOptions {
+    unitTests {
+      includeAndroidResources = true
+    }
+  }
 }
 
 dependencies {
