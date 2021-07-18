@@ -21,6 +21,7 @@ android-compose-activity = "androidx.activity:activity-compose:1.3.0-rc01"
 android-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha04"
 android-compose-testing-core = { module = "androidx.compose.ui:ui-test", version.ref = "compose" }
 android-compose-testing-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+android-compose-testing-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
 
 android-hilt-navigation-compose = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha03"
 
@@ -31,8 +32,9 @@ android-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", ver
 android-material = "com.google.android.material:material:1.3.0"
 android-core-ktx = "androidx.core:core-ktx:1.5.0"
 android-compat = "androidx.appcompat:appcompat:1.3.0"
-android-fragment = "androidx.fragment:fragment-ktx:1.3.3"
 android-activity = "androidx.activity:activity-ktx:1.2.3"
+android-fragment-core = "androidx.fragment:fragment-ktx:1.3.3"
+android-fragment-testing = "androidx.fragment:fragment-testing:1.3.5"
 
 android-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
 android-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
@@ -73,7 +75,7 @@ android-ui = [
     "android-material",
     "android-compat",
     "android-core-ktx",
-    "android-fragment",
+    "android-fragment-core",
     "android-activity",
 
     "android-lifecycle-runtime",
@@ -97,4 +99,9 @@ android-test = [
 
     "android-compose-testing-core",
     "android-compose-testing-junit4"
+]
+
+android-debug-test = [
+    "android-fragment-testing",
+    "android-compose-testing-manifest"
 ]

@@ -58,6 +58,7 @@ dependencies {
   testImplementation libs.bundles.test
 
   androidTestImplementation libs.bundles.android.test
+  debugImplementation libs.bundles.android.debug.test
 }
 
 kapt {
