@@ -19,6 +19,8 @@ android-compose-material = { module = "androidx.compose.material:material", vers
 android-compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
 android-compose-activity = "androidx.activity:activity-compose:1.3.0-rc01"
 android-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha04"
+android-compose-testing-core = { module = "androidx.compose.ui:ui-test", version.ref = "compose" }
+android-compose-testing-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 
 android-hilt-navigation-compose = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha03"
 
@@ -49,6 +51,7 @@ kotlin-coroutine-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-cor
 kotlin-coroutine-ui = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlincoroutines" }
 
 junit = "junit:junit:4.13"
+robolectric = "org.robolectric:robolectric:4.6.1"
 
 [bundles]
 kotlin-android = ["kotlin-stdlib", "kotlin-coroutine-core", "kotlin-coroutine-ui"]
@@ -79,10 +82,19 @@ android-ui = [
 
     "android-coil"
 ]
+
 test = [
+    "android-test-runner",
+    "android-compose-testing-core",
+    "android-compose-testing-junit4",
+    "robolectric",
     "junit"
 ]
+
 android-test = [
     "android-test-runner",
-    "android-test-espresso"
+    "android-test-espresso",
+
+    "android-compose-testing-core",
+    "android-compose-testing-junit4"
 ]
