@@ -2,7 +2,6 @@ buildscript {
   repositories {
     google()
     mavenCentral()
-    jcenter()
   }
   dependencies {
     classpath libs.android.plugin
@@ -15,8 +14,6 @@ allprojects {
   repositories {
     google()
     mavenCentral()
-    maven { url 'https://androidx.dev/snapshots/builds/7560678/artifacts/repository/' }
-    jcenter()
   }
 
   tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
