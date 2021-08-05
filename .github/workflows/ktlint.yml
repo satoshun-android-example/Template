@@ -1,0 +1,30 @@
+name: Run Ktlint
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup ktlint
+      run: |
+        curl -sSLO https://github.com/pinterest/ktlint/releases/download/0.36.0/ktlint &&
+        chmod a+x ktlint &&
+        sudo mv ktlint /usr/local/bin/
+
+    - name: Run ktlint
+      run: ktlint -F "**/*.kt"
+      continue-on-error: true
+
+    - name: Create PR
+      id: cpr
+      uses: peter-evans/create-pull-request@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: formatter
+        title: 'formatter'
+        branch: create-pull-request
