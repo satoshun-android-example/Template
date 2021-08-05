@@ -1,9 +1,9 @@
 [versions]
-kotlin = "1.5.10"
-kotlincoroutines = "1.5.0"
+kotlin = "1.5.21"
+kotlincoroutines = "1.5.1"
 
-daggerhilt = "2.37"
-compose = "1.0.0"
+daggerhilt = "2.38.1"
+compose = "1.0.1"
 
 [libraries]
 android-plugin = "com.android.tools.build:gradle:7.0.0"
@@ -15,10 +15,12 @@ android-compose-runtime-core = { module = "androidx.compose.runtime:runtime", ve
 android-compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
 android-compose-foundation-core = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 android-compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout", version.ref = "compose" }
+android-compose-constraint = "androidx.constraintlayout:constraintlayout-compose:1.0.0-beta02"
 android-compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
 android-compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
 android-compose-activity = "androidx.activity:activity-compose:1.3.0"
-android-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha05"
+android-compose-accompanist-swiperefresh = "com.google.accompanist:accompanist-swiperefresh:0.16.0"
+android-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha06"
 android-compose-testing-core = { module = "androidx.compose.ui:ui-test", version.ref = "compose" }
 android-compose-testing-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 android-compose-testing-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
@@ -81,6 +83,10 @@ android-ui = [
     "android-lifecycle-runtime",
     "android-lifecycle-livedata",
     "android-lifecycle-viewmodel",
+
+    "android-compose-constraint",
+
+    "android-compose-accompanist-swiperefresh",
 
     "android-coil"
 ]
