@@ -20,6 +20,7 @@ android-compose-material = { module = "androidx.compose.material:material", vers
 android-compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
 android-compose-activity = "androidx.activity:activity-compose:1.3.0"
 android-compose-accompanist-swiperefresh = "com.google.accompanist:accompanist-swiperefresh:0.16.0"
+android-compose-accompanist-navigation = "com.google.accompanist:accompanist-navigation-animation:0.16.0"
 android-compose-navigation = "androidx.navigation:navigation-compose:2.4.0-alpha06"
 android-compose-testing-core = { module = "androidx.compose.ui:ui-test", version.ref = "compose" }
 android-compose-testing-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
@@ -32,7 +33,7 @@ android-dagger-hilt-android = { module = "com.google.dagger:hilt-android", versi
 android-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "daggerhilt" }
 
 android-material = "com.google.android.material:material:1.3.0"
-android-core-ktx = "androidx.core:core-ktx:1.5.0"
+android-core-ktx = "androidx.core:core-ktx:1.6.0"
 android-compat = "androidx.appcompat:appcompat:1.3.0"
 android-activity = "androidx.activity:activity-ktx:1.2.3"
 android-fragment-core = "androidx.fragment:fragment-ktx:1.3.3"
@@ -87,6 +88,7 @@ android-ui = [
     "android-compose-constraint",
 
     "android-compose-accompanist-swiperefresh",
+    "android-compose-accompanist-navigation",
 
     "android-coil"
 ]
