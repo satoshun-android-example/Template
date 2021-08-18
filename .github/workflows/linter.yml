@@ -6,7 +6,7 @@ name: Run Lint
 on:
   push:
     branches-ignore:
-      - 'master'
+      - 'main'
 
 ###############
 # Set the Job #
