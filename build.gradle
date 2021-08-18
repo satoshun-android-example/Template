@@ -4,9 +4,9 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath libs.android.plugin
-    classpath libs.kotlin.plugin
-    classpath libs.android.dagger.hilt.plugin
+    classpath libs.android.gradle
+    classpath libs.kotlin.gradle
+    classpath libs.android.dagger.hilt.gradle
   }
 }
 

@@ -6,7 +6,7 @@ daggerhilt = "2.38.1"
 compose = "1.0.1"
 
 [libraries]
-android-plugin = "com.android.tools.build:gradle:7.0.0"
+android-gradle = "com.android.tools.build:gradle:7.0.0"
 
 android-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 android-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compose" }
@@ -28,7 +28,7 @@ android-compose-testing-manifest = { module = "androidx.compose.ui:ui-test-manif
 
 android-hilt-navigation-compose = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha03"
 
-android-dagger-hilt-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "daggerhilt" }
+android-dagger-hilt-gradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "daggerhilt" }
 android-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "daggerhilt" }
 android-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "daggerhilt" }
 
@@ -50,7 +50,7 @@ android-test-espresso = "androidx.test.espresso:espresso-core:3.1.1"
 android-coil = "io.coil-kt:coil:1.1.1"
 
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
-kotlin-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
 kotlin-coroutine-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlincoroutines" }
 kotlin-coroutine-ui = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlincoroutines" }
