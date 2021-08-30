@@ -1,8 +1,7 @@
 name: TEST
 
-# on:
-#   schedule:
-#   - cron:  '*/15 * * * *'
+on:
+  workflow_dispatch:
     
 jobs:
   test:
@@ -17,9 +16,10 @@ jobs:
 
     - name: TEST
       id: cpr
-      uses: peter-evans/create-pull-request@v2
+      uses: peter-evans/create-pull-request@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: test2
-        title: 'test'
-        branch: create-pull-request
+        commit-message: format code by ktlint
+        title: 'Run ktlint formatter'
+        branch: format-code-by-ktlint
+        labels: enhancement
