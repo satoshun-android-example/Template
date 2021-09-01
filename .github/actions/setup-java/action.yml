@@ -9,3 +9,4 @@ runs:
       with:
         distribution: 'adopt'
         java-version: '11'
+        cache: 'gradle'
