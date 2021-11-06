@@ -2,7 +2,7 @@
 kotlin = "1.5.31"
 kotlincoroutines = "1.5.2"
 
-daggerhilt = "2.39.1"
+daggerhilt = "2.40"
 compose = "1.0.4"
 
 [libraries]
