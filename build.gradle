@@ -21,6 +21,13 @@ allprojects {
       jvmTarget = JavaVersion.VERSION_1_8
     }
   }
+
+  // https://issuetracker.google.com/issues/194113162
+  tasks.withType(JavaCompile).configureEach {
+    javaCompiler = javaToolchains.compilerFor {
+      languageVersion = JavaLanguageVersion.of(11)
+    }
+  }
 }
 
 task clean(type: Delete) {
