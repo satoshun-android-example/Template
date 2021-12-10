@@ -6,7 +6,7 @@ daggerhilt = "2.40"
 compose = "1.0.4"
 
 [libraries]
-android-gradle = "com.android.tools.build:gradle:7.0.3"
+android-gradle = "com.android.tools.build:gradle:7.0.4"
 
 android-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 android-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compose" }
