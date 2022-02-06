@@ -7,8 +7,8 @@ apply {
 }
 
 repositories {
-  jcenter()
   google()
+  mavenCentral()
 }
 
 dependencies {
