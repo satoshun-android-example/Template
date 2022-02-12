@@ -3,11 +3,10 @@ kotlin = "1.6.10"
 kotlincoroutines = "1.6.0"
 
 daggerhilt = "2.40.5"
-compose = "1.1.0-rc01"
-composeCompiler = "1.1.0-rc02"
+compose = "1.1.0"
 
 [libraries]
-android-gradle = "com.android.tools.build:gradle:7.1.0"
+android-gradle = "com.android.tools.build:gradle:7.1.1"
 
 android-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 android-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compose" }
