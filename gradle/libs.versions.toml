@@ -1,9 +1,9 @@
 [versions]
-kotlin = "1.6.10"
-kotlincoroutines = "1.6.0"
+kotlin = "1.6.20"
+kotlincoroutines = "1.6.1"
 
 daggerhilt = "2.40.5"
-compose = "1.2.0-alpha07"
+compose = "1.2.0-alpha08"
 accompanist = "0.24.6-alpha"
 
 [libraries]
