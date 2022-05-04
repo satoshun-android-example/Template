@@ -18,7 +18,12 @@ allprojects {
 
   tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     kotlinOptions {
-      jvmTarget = JavaVersion.VERSION_1_8
+      jvmTarget = JavaVersion.VERSION_11
+
+      freeCompilerArgs += [
+          // https://mobile.twitter.com/ZacSweers/status/1520399593577582593
+          "-Xsam-conversions=class"
+      ]
     }
   }
 
