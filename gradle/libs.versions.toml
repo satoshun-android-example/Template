@@ -30,7 +30,7 @@ android-compose-accompanist-systemuicontroller = { module = "com.google.accompan
 
 android-compose-activity = "androidx.activity:activity-compose:1.4.0"
 android-compose-navigation = "androidx.navigation:navigation-compose:2.4.2"
-android-compose-constraint = "androidx.constraintlayout:constraintlayout-compose:1.0.0"
+android-compose-constraint = "androidx.constraintlayout:constraintlayout-compose:1.0.1"
 android-hilt-navigation-compose = "androidx.hilt:hilt-navigation-compose:1.0.0"
 
 
