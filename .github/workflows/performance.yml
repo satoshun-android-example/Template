@@ -34,7 +34,7 @@ jobs:
         source ~/.sdkman/bin/sdkman-init.sh
         gradle-profiler --benchmark --scenario-file performance.scenarios ${{ github.event.inputs.name }}
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: performance file
         path: |
