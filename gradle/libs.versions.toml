@@ -63,7 +63,7 @@ kotlin-coroutine-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-cor
 kotlin-coroutine-ui = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlincoroutines" }
 
 junit = "junit:junit:4.13"
-robolectric = "org.robolectric:robolectric:4.6.1"
+robolectric = "org.robolectric:robolectric:4.8.1"
 
 [bundles]
 kotlin-android = ["kotlin-stdlib", "kotlin-coroutine-core", "kotlin-coroutine-ui"]
