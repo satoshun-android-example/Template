@@ -52,7 +52,7 @@ android-lifecycle-viewmodel-compose = "androidx.lifecycle:lifecycle-viewmodel-co
 
 android-test-truth = "com.google.truth:truth:1.1.2"
 android-test-runner = "androidx.test:runner:1.4.0"
-android-test-espresso = "androidx.test.espresso:espresso-core:3.1.1"
+android-test-espresso = "androidx.test.espresso:espresso-core:3.4.0"
 
 android-coil = "io.coil-kt:coil:1.4.0"
 
