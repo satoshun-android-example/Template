@@ -7,7 +7,7 @@ compose = "1.2.0-beta02"
 accompanist = "0.24.6-alpha"
 
 [libraries]
-android-gradle = "com.android.tools.build:gradle:7.2.0"
+android-gradle = "com.android.tools.build:gradle:7.2.1"
 
 android-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 android-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compose" }
