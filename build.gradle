@@ -22,7 +22,9 @@ allprojects {
 
       freeCompilerArgs += [
           // https://mobile.twitter.com/ZacSweers/status/1520399593577582593
-          "-Xsam-conversions=class"
+          "-Xsam-conversions=class",
+
+//          "-Xuse-k2"
       ]
     }
   }
