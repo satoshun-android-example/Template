@@ -21,10 +21,15 @@ allprojects {
       jvmTarget = JavaVersion.VERSION_11
 
       freeCompilerArgs += [
+          "-Xopt-in=kotlin.RequiresOptIn",
+
           // https://mobile.twitter.com/ZacSweers/status/1520399593577582593
           "-Xsam-conversions=class",
 
-//          "-Xuse-k2"
+//          "-Xuse-k2",
+
+//          "-P",
+//          "plugin:androidx.compose.compiler.plugins.kotlin:suppressKotlinVersionCompatibilityCheck=true",
       ]
     }
   }
