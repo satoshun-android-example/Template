@@ -1,9 +1,10 @@
 [versions]
-kotlin = "1.6.21"
+kotlin = "1.7.0-RC2"
 kotlincoroutines = "1.6.2"
 
 daggerhilt = "2.42"
-compose = "1.2.0-beta02"
+compose = "1.2.0-beta03"
+composeCompiler = "1.2.0-dev-k1.7.0-RC2-6ab9bf980ae"
 accompanist = "0.24.6-alpha"
 
 [libraries]
