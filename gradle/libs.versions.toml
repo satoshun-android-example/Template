@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.7.0-RC2"
+kotlin = "1.7.0"
 kotlincoroutines = "1.6.2"
 
 daggerhilt = "2.42"
