@@ -17,6 +17,7 @@ jobs:
     name: Lint Code Base
     # Set the agent to run on
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     ##################
     # Load all steps #
