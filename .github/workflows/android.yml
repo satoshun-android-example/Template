@@ -20,5 +20,16 @@ jobs:
     - name: Copy CI gradle.properties
       run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
 
-    - name: Build with Gradle
-      run: ./gradlew build --stacktrace
+    - uses: burrunan/gradle-cache-action@v1
+      name: Build
+      with:
+        gradle-dependencies-cache-key: |
+          gradle/libs.versions.toml
+        arguments: build
+
+    - name: Upload build reports
+      if: always()
+      uses: actions/upload-artifact@v1
+      with:
+        name: build-reports
+        path: app/build/reports
