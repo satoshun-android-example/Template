@@ -39,7 +39,7 @@ android-dagger-hilt-gradle = { module = "com.google.dagger:hilt-android-gradle-p
 android-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "daggerhilt" }
 android-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "daggerhilt" }
 
-android-material = "com.google.android.material:material:1.6.0"
+android-material = "com.google.android.material:material:1.6.1"
 android-core-ktx = "androidx.core:core-ktx:1.8.0"
 android-compat = "androidx.appcompat:appcompat:1.4.2"
 android-activity = "androidx.activity:activity-ktx:1.4.0"
