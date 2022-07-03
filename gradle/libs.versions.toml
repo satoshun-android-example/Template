@@ -3,7 +3,7 @@ kotlin = "1.7.0"
 kotlincoroutines = "1.6.2"
 
 daggerhilt = "2.42"
-compose = "1.2.0-beta03"
+compose = "1.2.0-rc03"
 composeCompiler = "1.2.0"
 accompanist = "0.24.6-alpha"
 
