@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.7.10"
-kotlincoroutines = "1.6.2"
+kotlincoroutines = "1.6.4"
 
 daggerhilt = "2.42"
 compose = "1.2.0-rc03"
