@@ -44,7 +44,7 @@ android-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", ver
 
 android-material = "com.google.android.material:material:1.6.1"
 android-core-ktx = "androidx.core:core-ktx:1.8.0"
-android-compat = "androidx.appcompat:appcompat:1.5.0"
+android-compat = "androidx.appcompat:appcompat:1.5.1"
 android-activity = "androidx.activity:activity-ktx:1.5.1"
 android-fragment-core = "androidx.fragment:fragment-ktx:1.5.2"
 android-fragment-testing = "androidx.fragment:fragment-testing:1.5.2"
