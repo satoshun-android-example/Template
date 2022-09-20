@@ -1,13 +1,8 @@
-buildscript {
-  repositories {
-    google()
-    mavenCentral()
-  }
-  dependencies {
-    classpath(libs.android.gradle)
-    classpath(libs.kotlin.gradle)
-    classpath(libs.android.dagger.hilt.gradle)
-  }
+plugins {
+  alias(libs.plugins.android.app) apply false
+  alias(libs.plugins.android.library) apply false
+  alias(libs.plugins.kotlin.android) apply false
+  alias(libs.plugins.dagger.hilt) apply false
 }
 
 allprojects {
