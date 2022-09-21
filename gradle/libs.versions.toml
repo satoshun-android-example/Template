@@ -44,9 +44,9 @@ android-compose-constraint = "androidx.constraintlayout:constraintlayout-compose
 android-hilt-navigation-compose = "androidx.hilt:hilt-navigation-compose:1.0.0"
 
 
-android-dagger-hilt-gradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
-android-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
-android-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
+dagger-hilt-gradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
+dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
 
 android-material = "com.google.android.material:material:1.6.1"
 android-core-ktx = "androidx.core:core-ktx:1.9.0"

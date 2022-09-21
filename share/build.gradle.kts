@@ -6,7 +6,7 @@ plugins {
 }
 
 dependencies {
-  implementation(libs.android.dagger.hilt.android)
-  kapt(libs.android.dagger.hilt.compiler)
+  implementation(libs.dagger.hilt.android)
+  kapt(libs.dagger.hilt.compiler)
 }
 

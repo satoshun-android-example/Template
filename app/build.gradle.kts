@@ -48,8 +48,8 @@ dependencies {
   implementation(libs.bundles.kotlin.android)
   implementation(libs.bundles.android.ui)
 
-  implementation(libs.android.dagger.hilt.android)
-  kapt(libs.android.dagger.hilt.compiler)
+  implementation(libs.dagger.hilt.android)
+  kapt(libs.dagger.hilt.compiler)
 
   testImplementation(libs.bundles.test)
 
