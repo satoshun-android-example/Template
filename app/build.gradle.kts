@@ -1,17 +1,13 @@
 plugins {
-  alias(libs.plugins.android.app)
-  alias(libs.plugins.kotlin.android)
+  id("example.android.application")
+
   alias(libs.plugins.dagger.hilt)
   alias(libs.plugins.kotlin.kapt)
 }
 
 android {
-  compileSdk = 33
-
   defaultConfig {
     applicationId = "io.github.satoshun.example"
-    minSdk = 25
-    targetSdk = 33
     versionCode = 1
     versionName = "1.0"
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -29,15 +25,6 @@ android {
       "META-INF/AL2.0",
       "META-INF/LGPL2.1"
     )
-  }
-
-  kotlinOptions {
-    jvmTarget = "11"
-  }
-
-  compileOptions {
-    targetCompatibility(JavaVersion.VERSION_11)
-    sourceCompatibility(JavaVersion.VERSION_11)
   }
 
   buildFeatures {
