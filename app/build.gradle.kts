@@ -43,6 +43,8 @@ android {
 }
 
 dependencies {
+  implementation(projects.share)
+
   implementation(libs.bundles.kotlin.android)
   implementation(libs.bundles.android.ui)
 
