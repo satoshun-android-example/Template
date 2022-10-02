@@ -64,7 +64,7 @@ android-test-truth = "com.google.truth:truth:1.1.3"
 android-test-runner = "androidx.test:runner:1.4.0"
 android-test-espresso = "androidx.test.espresso:espresso-core:3.4.0"
 
-android-coil = "io.coil-kt:coil-compose:2.2.1"
+android-coil = "io.coil-kt:coil-compose:2.2.2"
 
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
