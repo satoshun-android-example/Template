@@ -43,6 +43,8 @@ android {
 }
 
 dependencies {
+  implementation(platform(libs.compose.bom))
+
   implementation(projects.share)
 
   implementation(libs.bundles.kotlin.android)

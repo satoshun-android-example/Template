@@ -3,9 +3,8 @@ kotlin = "1.7.20"
 kotlincoroutines = "1.6.4"
 
 dagger = "2.44"
-compose = "1.3.0"
 composeCompiler = "1.3.2"
-accompanist = "0.27.0"
+accompanist = "0.27.1"
 agp = "7.3.1"
 
 [plugins]
@@ -16,33 +15,31 @@ dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 
 [libraries]
-android-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
-android-compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
-android-compose-runtime-core = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
-android-compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
-android-compose-foundation-core = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
-android-compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout", version.ref = "compose" }
-android-compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
+compose-bom = "androidx.compose:compose-bom:2022.11.00"
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-runtime-core = { module = "androidx.compose.runtime:runtime" }
+compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
+compose-foundation-core = { module = "androidx.compose.foundation:foundation" }
+compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
+compose-animation = { module = "androidx.compose.animation:animation" }
+compose-material = { module = "androidx.compose.material3:material3" }
+compose-testing-core = { module = "androidx.compose.ui:ui-test" }
+compose-testing-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+compose-testing-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 
-android-compose-material = "androidx.compose.material3:material3:1.0.0"
+compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
 
-android-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
+compose-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
+compose-accompanist-navigation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
+compose-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanist" }
+compose-accompanist-insetsui = { module = "com.google.accompanist:accompanist-insets-ui", version.ref = "accompanist" }
+compose-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
 
-android-compose-testing-core = { module = "androidx.compose.ui:ui-test", version.ref = "compose" }
-android-compose-testing-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
-android-compose-testing-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
-
-android-compose-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
-android-compose-accompanist-navigation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
-android-compose-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanist" }
-android-compose-accompanist-insetsui = { module = "com.google.accompanist:accompanist-insets-ui", version.ref = "accompanist" }
-android-compose-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
-
-android-compose-activity = "androidx.activity:activity-compose:1.6.1"
-android-compose-navigation = "androidx.navigation:navigation-compose:2.5.3"
-android-compose-constraint = "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+compose-activity = "androidx.activity:activity-compose:1.6.1"
+compose-navigation = "androidx.navigation:navigation-compose:2.5.3"
+compose-constraint = "androidx.constraintlayout:constraintlayout-compose:1.0.1"
 android-hilt-navigation-compose = "androidx.hilt:hilt-navigation-compose:1.0.0"
-
 
 dagger-hilt-gradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
@@ -84,17 +81,17 @@ kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-pl
 [bundles]
 kotlin-android = ["kotlin-stdlib", "kotlin-coroutine-core", "kotlin-coroutine-ui"]
 android-ui = [
-    "android-compose-ui",
-    "android-compose-compiler",
-    "android-compose-tooling",
-    "android-compose-runtime-core",
-    "android-compose-runtime-livedata",
-    "android-compose-foundation-core",
-    "android-compose-foundation-layout",
-    "android-compose-material",
-    "android-compose-animation",
-    "android-compose-activity",
-    "android-compose-navigation",
+    "compose-ui",
+    "compose-compiler",
+    "compose-tooling",
+    "compose-runtime-core",
+    "compose-runtime-livedata",
+    "compose-foundation-core",
+    "compose-foundation-layout",
+    "compose-material",
+    "compose-animation",
+    "compose-activity",
+    "compose-navigation",
 
     "android-hilt-navigation-compose",
 
@@ -109,21 +106,21 @@ android-ui = [
     "android-lifecycle-viewmodel-core",
     "android-lifecycle-viewmodel-compose",
 
-    "android-compose-constraint",
+    "compose-constraint",
 
-    "android-compose-accompanist-swiperefresh",
-    "android-compose-accompanist-navigation",
-    "android-compose-accompanist-insets",
-    "android-compose-accompanist-insetsui",
-    "android-compose-accompanist-systemuicontroller",
+    "compose-accompanist-swiperefresh",
+    "compose-accompanist-navigation",
+    "compose-accompanist-insets",
+    "compose-accompanist-insetsui",
+    "compose-accompanist-systemuicontroller",
 
     "android-coil"
 ]
 
 test = [
     "android-test-runner",
-    "android-compose-testing-core",
-    "android-compose-testing-junit4",
+    "compose-testing-core",
+    "compose-testing-junit4",
     "robolectric",
     "junit"
 ]
@@ -132,11 +129,11 @@ android-test = [
     "android-test-runner",
     "android-test-espresso",
 
-    "android-compose-testing-core",
-    "android-compose-testing-junit4"
+    "compose-testing-core",
+    "compose-testing-junit4"
 ]
 
 android-debug-test = [
     "android-fragment-testing",
-    "android-compose-testing-manifest"
+    "compose-testing-manifest"
 ]
