@@ -2,7 +2,7 @@ plugins {
   id("example.android.application")
 
   alias(libs.plugins.dagger.hilt)
-  alias(libs.plugins.kotlin.kapt)
+  alias(libs.plugins.napt)
 }
 
 android {
@@ -51,14 +51,10 @@ dependencies {
   implementation(libs.bundles.android.ui)
 
   implementation(libs.dagger.hilt.android)
-  kapt(libs.dagger.hilt.compiler)
+  annotationProcessor(libs.dagger.hilt.compiler)
 
   testImplementation(libs.bundles.test)
 
   androidTestImplementation(libs.bundles.android.test)
   debugImplementation(libs.bundles.android.debug.test)
-}
-
-kapt {
-  correctErrorTypes = true
 }
