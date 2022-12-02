@@ -2,11 +2,10 @@ plugins {
   id("example.android.library")
 
   alias(libs.plugins.dagger.hilt)
-  alias(libs.plugins.kotlin.kapt)
+  alias(libs.plugins.napt)
 }
 
 dependencies {
   implementation(libs.dagger.hilt.android)
-  kapt(libs.dagger.hilt.compiler)
+  annotationProcessor(libs.dagger.hilt.compiler)
 }
-
