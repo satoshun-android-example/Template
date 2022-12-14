@@ -43,7 +43,7 @@ android {
 }
 
 dependencies {
-  implementation(platform(libs.compose.bom))
+  api(platform(libs.compose.bom))
 
   implementation(projects.share)
 
