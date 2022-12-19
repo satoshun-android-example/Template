@@ -50,6 +50,8 @@ dependencies {
   implementation(libs.bundles.kotlin.android)
   implementation(libs.bundles.android.ui)
 
+  debugImplementation(libs.leakcanary)
+
   implementation(libs.dagger.hilt.android)
   annotationProcessor(libs.dagger.hilt.compiler)
 
