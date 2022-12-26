@@ -1,0 +1,25 @@
+<resources>
+  <style name="Platform.Theme.MyApp" parent="android:Theme.Material.Light" />
+
+  <style name="Base.Theme.MyApp" parent="Platform.Theme.MyApp">
+    <item name="android:windowActionModeOverlay">true</item>
+  </style>
+
+  <style name="Theme.MyApp" parent="Base.Theme.MyApp"/>
+
+  <style name="Theme.MyApp.NoActionBar">
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
+
+  <style name="Theme.MyApp.Immerse" parent="Theme.MyApp.NoActionBar">
+    <item name="android:statusBarColor">@android:color/transparent</item>
+
+    <item name="android:navigationBarColor">@color/nav_bar_scrim</item>
+    <item name="android:windowLightNavigationBar">@bool/use_light_nav_bar</item>
+  </style>
+
+  <style name="Theme.MyApp.Main" parent="Theme.MyApp.Immerse">
+    <item name="android:windowLightStatusBar">@bool/use_light_status_bar</item>
+  </style>
+</resources>

@@ -35,7 +35,10 @@ allprojects {
 
         "-P",
         "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" +
-          project.buildDir.absolutePath + "/compose_metrics"
+          project.buildDir.absolutePath + "/compose_metrics",
+
+        "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
+        "-opt-in=androidx.compose.foundation.layout.ExperimentalLayoutApi",
       )
     }
   }
