@@ -5,7 +5,7 @@ kotlincoroutines = "1.6.4"
 dagger = "2.44.2"
 composeCompiler = "1.4.0-alpha02"
 accompanist = "0.28.0"
-agp = "7.3.1"
+agp = "7.4.0"
 
 [plugins]
 android-app = { id = "com.android.application", version.ref = "agp" }
