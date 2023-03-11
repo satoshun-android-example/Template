@@ -19,12 +19,10 @@ package com.google.samples.apps.nowinandroid
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.api.plugins.ExtensionAware
-import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.provideDelegate
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+import java.io.File
 
 /**
  * Configure base Kotlin with Android options
@@ -32,7 +30,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 internal fun Project.configureKotlinAndroid(
   commonExtension: CommonExtension<*, *, *, *>,
 ) {
-  commonExtension.apply {
+  with(commonExtension) {
     compileSdk = 33
 
     defaultConfig {
@@ -40,11 +38,13 @@ internal fun Project.configureKotlinAndroid(
     }
 
     compileOptions {
-      sourceCompatibility = JavaVersion.VERSION_17
-      targetCompatibility = JavaVersion.VERSION_17
+      sourceCompatibility = JavaVersion.VERSION_11
+      targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
+      jvmTarget = JavaVersion.VERSION_11.toString()
+
       // Treat all Kotlin warnings as errors (disabled by default)
       // Override by setting warningsAsErrors=true in your ~/.gradle/gradle.properties
       val warningsAsErrors: String? by project
@@ -57,14 +57,44 @@ internal fun Project.configureKotlinAndroid(
         "-opt-in=kotlinx.coroutines.FlowPreview",
         "-opt-in=kotlin.Experimental",
         // Enable experimental kotlinx serialization APIs
-        "-opt-in=kotlinx.serialization.ExperimentalSerializationApi"
+        "-opt-in=kotlinx.serialization.ExperimentalSerializationApi",
+
+        // https://mobile.twitter.com/ZacSweers/status/1520399593577582593
+        "-Xsam-conversions=class",
+
+        "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
+        "-opt-in=androidx.compose.foundation.layout.ExperimentalLayoutApi",
       )
 
-      jvmTarget = JavaVersion.VERSION_17.toString()
+      freeCompilerArgs = freeCompilerArgs + buildComposeMetricsParameters()
     }
   }
 }
 
 fun CommonExtension<*, *, *, *>.kotlinOptions(block: KotlinJvmOptions.() -> Unit) {
   (this as ExtensionAware).extensions.configure("kotlinOptions", block)
+}
+
+private fun Project.buildComposeMetricsParameters(): List<String> {
+  val metricParameters = mutableListOf<String>()
+  val enableMetricsProvider = project.providers.gradleProperty("enableComposeCompilerMetrics")
+  val enableMetrics = (enableMetricsProvider.orNull == "true")
+  if (enableMetrics) {
+    val metricsFolder = File(project.buildDir, "compose-metrics")
+    metricParameters.add("-P")
+    metricParameters.add(
+      "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" + metricsFolder.absolutePath
+    )
+  }
+
+  val enableReportsProvider = project.providers.gradleProperty("enableComposeCompilerReports")
+  val enableReports = (enableReportsProvider.orNull == "true")
+  if (enableReports) {
+    val reportsFolder = File(project.buildDir, "compose-reports")
+    metricParameters.add("-P")
+    metricParameters.add(
+      "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=" + reportsFolder.absolutePath
+    )
+  }
+  return metricParameters.toList()
 }

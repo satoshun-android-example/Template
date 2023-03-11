@@ -14,39 +14,10 @@ allprojects {
 //    maven(url = "https://androidx.dev/storage/compose-compiler/repository/")
   }
 
-  tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    kotlinOptions {
-      jvmTarget = JavaVersion.VERSION_17.toString()
-
-      freeCompilerArgs += listOf(
-        "-opt-in=kotlin.RequiresOptIn",
-
-        // https://mobile.twitter.com/ZacSweers/status/1520399593577582593
-        "-Xsam-conversions=class",
-
-//          "-Xuse-k2",
-
-//        "-P",
-//        "plugin:androidx.compose.compiler.plugins.kotlin:suppressKotlinVersionCompatibilityCheck=true",
-
-        "-P",
-        "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=" +
-          project.buildDir.absolutePath + "/compose_metrics",
-
-        "-P",
-        "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" +
-          project.buildDir.absolutePath + "/compose_metrics",
-
-        "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
-        "-opt-in=androidx.compose.foundation.layout.ExperimentalLayoutApi",
-      )
-    }
-  }
-
   // https://issuetracker.google.com/issues/194113162
-  tasks.withType<JavaCompile>().configureEach {
+//  tasks.withType<JavaCompile>().configureEach {
 //    javaCompiler = javaToolchains.compilerFor {
 //      languageVersion = JavaLanguageVersion.of(11)
 //    }
-  }
+//  }
 }
