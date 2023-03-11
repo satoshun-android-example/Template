@@ -5,8 +5,9 @@ plugins {
 group = "io.github.satoshun.example.buildlogic"
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_11
-  targetCompatibility = JavaVersion.VERSION_11
+  toolchain {
+    languageVersion.set(JavaLanguageVersion.of(17))
+  }
 }
 
 dependencies {
