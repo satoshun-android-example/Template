@@ -6,6 +6,8 @@ plugins {
 }
 
 android {
+  namespace = "io.github.satoshun.example"
+
   defaultConfig {
     applicationId = "io.github.satoshun.example"
     versionCode = 1
