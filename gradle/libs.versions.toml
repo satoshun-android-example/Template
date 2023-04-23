@@ -48,8 +48,8 @@ dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref
 android-core-ktx = "androidx.core:core-ktx:1.10.0"
 android-compat = "androidx.appcompat:appcompat:1.6.1"
 android-activity = "androidx.activity:activity-ktx:1.7.1"
-android-fragment-core = "androidx.fragment:fragment-ktx:1.5.6"
-android-fragment-testing = "androidx.fragment:fragment-testing:1.5.6"
+android-fragment-core = "androidx.fragment:fragment-ktx:1.5.7"
+android-fragment-testing = "androidx.fragment:fragment-testing:1.5.7"
 
 android-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
 android-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
