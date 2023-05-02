@@ -47,18 +47,17 @@ android {
 dependencies {
   api(platform(libs.compose.bom))
 
+  implementation(libs.bundles.android.ui)
+  implementation(libs.bundles.kotlin.android)
+  implementation(libs.dagger.hilt.android)
   implementation(projects.share)
 
-  implementation(libs.bundles.kotlin.android)
-  implementation(libs.bundles.android.ui)
-
+  debugImplementation(libs.bundles.android.debug.test)
   debugImplementation(libs.leakcanary)
 
-  implementation(libs.dagger.hilt.android)
   annotationProcessor(libs.dagger.hilt.compiler)
 
   testImplementation(libs.bundles.test)
 
   androidTestImplementation(libs.bundles.android.test)
-  debugImplementation(libs.bundles.android.debug.test)
 }
