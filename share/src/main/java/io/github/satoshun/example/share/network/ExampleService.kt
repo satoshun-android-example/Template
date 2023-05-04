@@ -8,6 +8,7 @@ import io.ktor.client.request.get
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import javax.inject.Inject
@@ -18,19 +19,19 @@ class ExampleService @Inject constructor() {
       json(Json {
         prettyPrint = true
         isLenient = true
+        ignoreUnknownKeys = true
       })
     }
   }
 
-  suspend fun getUser(): User {
-    return client.get("https://example.com/users") {
+  suspend fun getGitHub(): GitHub {
+    return client.get("https://api.github.com") {
       contentType(ContentType.Application.Json)
     }.body()
   }
 }
 
 @Serializable
-data class User(
-  val id: Int,
-  val name: String,
+data class GitHub(
+  @SerialName("current_user_url") val currentUserUrl: String,
 )

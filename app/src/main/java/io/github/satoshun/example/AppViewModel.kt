@@ -14,9 +14,9 @@ class AppViewModel @Inject constructor(
 
   init {
     viewModelScope.launch {
-      runCatching { service.getUser() }
-        .onSuccess { println("useruser: $it") }
-        .onFailure { println("useruser: $it") }
+      runCatching { service.getGitHub() }
+        .onSuccess { println("githubgithub: $it") }
+        .onFailure { println("githubgithub: $it") }
     }
   }
 }
