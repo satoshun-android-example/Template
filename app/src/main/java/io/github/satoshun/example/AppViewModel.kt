@@ -1,5 +1,8 @@
 package io.github.satoshun.example
 
+import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
-class AppViewModel @Inject constructor()
+@HiltViewModel
+class AppViewModel @Inject constructor() : ViewModel()
