@@ -2,6 +2,7 @@ plugins {
   id("example.android.library")
 
   alias(libs.plugins.dagger.hilt)
+  alias(libs.plugins.kotlin.serialization)
   alias(libs.plugins.napt)
 }
 
