@@ -26,3 +26,6 @@
 -dontwarn org.bouncycastle.**
 -dontwarn org.openjsse.**
 -dontwarn org.slf4j.**
+
+-dontwarn io.github.satoshun.example.Hilt_App
+-dontwarn io.github.satoshun.example.Hilt_AppActivity
