@@ -12,5 +12,6 @@ plugins {
   alias(libs.plugins.kotlin.serialization) apply false
   alias(libs.plugins.dagger.hilt) apply false
   alias(libs.plugins.napt) apply false
+  alias(libs.plugins.bestPractices) apply false
   alias(libs.plugins.sortDependencies)
 }

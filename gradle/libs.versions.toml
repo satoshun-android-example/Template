@@ -17,7 +17,7 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
-bestPracticesPlugin = { id = "com.autonomousapps.plugin-best-practices-plugin", version = "0.9" }
+bestPractices = { id = "com.autonomousapps.plugin-best-practices-plugin", version = "0.9" }
 dependencyAnalysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysisPlugin" }
 sortDependencies = { id = "com.squareup.sort-dependencies", version.ref = "sortDependencies" }
 napt = "com.sergei-lapin.napt:1.19"

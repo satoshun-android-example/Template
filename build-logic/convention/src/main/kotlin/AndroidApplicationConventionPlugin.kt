@@ -26,7 +26,9 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
       with(pluginManager) {
         apply("com.android.application")
         apply("org.jetbrains.kotlin.android")
+        apply("kotlinx-serialization")
         apply("com.squareup.sort-dependencies")
+        apply("com.autonomousapps.plugin-best-practices-plugin")
       }
 
       extensions.configure<ApplicationExtension> {
