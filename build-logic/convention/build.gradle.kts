@@ -14,6 +14,7 @@ dependencies {
   compileOnly(libs.android.gradlePlugin)
   compileOnly(libs.kotlin.gradlePlugin)
   compileOnly(libs.sortDependencies.gradlePlugin)
+  compileOnly(libs.napt.gradlePlugin)
 }
 
 gradlePlugin {
