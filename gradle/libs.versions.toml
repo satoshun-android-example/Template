@@ -1,9 +1,9 @@
 [versions]
-kotlin = "1.8.20"
+kotlin = "1.8.21"
 kotlincoroutines = "1.6.4"
 
 dagger = "2.46"
-composeCompiler = "1.4.6"
+composeCompiler = "1.4.7"
 accompanist = "0.30.1"
 agp = "8.0.1"
 ktor = "2.3.0"
