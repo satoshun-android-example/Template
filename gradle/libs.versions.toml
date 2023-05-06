@@ -86,7 +86,7 @@ ktor-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version
 leakcanary = "com.squareup.leakcanary:leakcanary-android:2.10"
 
 junit = "junit:junit:4.13.2"
-robolectric = "org.robolectric:robolectric:4.10.1"
+robolectric = "org.robolectric:robolectric:4.10.2"
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
