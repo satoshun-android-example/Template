@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.8.21"
-kotlincoroutines = "1.7.0"
+kotlincoroutines = "1.7.1"
 
 dagger = "2.46"
 composeCompiler = "1.4.7"
