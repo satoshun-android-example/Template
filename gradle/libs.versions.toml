@@ -83,7 +83,7 @@ ktor-serialization = { module = "io.ktor:ktor-client-serialization", version.ref
 ktor-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 
-leakcanary = "com.squareup.leakcanary:leakcanary-android:2.10"
+leakcanary = "com.squareup.leakcanary:leakcanary-android:2.11"
 
 junit = "junit:junit:4.13.2"
 robolectric = "org.robolectric:robolectric:4.10.3"
