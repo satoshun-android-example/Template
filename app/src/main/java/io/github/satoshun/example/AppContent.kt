@@ -13,7 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import io.github.satoshun.example.theme.AppTheme
 
-@Composable fun AppContent() {
+@Composable
+fun AppContent() {
   Scaffold { paddingValues ->
     Row(
       Modifier
@@ -33,7 +34,9 @@ import io.github.satoshun.example.theme.AppTheme
   }
 }
 
-@Preview @Composable fun PreviewAppContent() {
+@Preview
+@Composable
+fun PreviewAppContent() {
   AppTheme {
     Surface {
       AppContent()
