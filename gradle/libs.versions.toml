@@ -12,7 +12,7 @@ agp = "8.1.0-beta04"
 ktor = "2.3.1"
 
 dependencyAnalysisPlugin = "1.20.0"
-sortDependencies = "0.2"
+sortDependencies = "0.3"
 napt = "1.19"
 
 [plugins]
