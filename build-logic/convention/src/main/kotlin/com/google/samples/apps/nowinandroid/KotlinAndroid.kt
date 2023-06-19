@@ -17,7 +17,6 @@
 package com.google.samples.apps.nowinandroid
 
 import com.android.build.api.dsl.CommonExtension
-import com.slapin.napt.NaptGradleExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.api.plugins.ExtensionAware
@@ -72,12 +71,6 @@ internal fun Project.configureKotlinAndroid(
 
       // enable k2 compiler
       languageVersion = "2.0"
-    }
-  }
-
-  pluginManager.withPlugin("com.sergei-lapin.napt") {
-    configure<NaptGradleExtension> {
-      generateNaptTrigger.set(false)
     }
   }
 }

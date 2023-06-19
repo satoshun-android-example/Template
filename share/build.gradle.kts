@@ -3,7 +3,6 @@ plugins {
 
   alias(libs.plugins.dagger.hilt)
   alias(libs.plugins.kotlin.serialization)
-  alias(libs.plugins.napt)
 }
 
 android {
@@ -18,5 +17,5 @@ dependencies {
   implementation(libs.ktor.negotiation)
   implementation(libs.ktor.json)
 
-  annotationProcessor(libs.dagger.hilt.compiler)
+  kapt(libs.dagger.hilt.compiler)
 }

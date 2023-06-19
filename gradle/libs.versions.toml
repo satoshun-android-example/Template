@@ -13,7 +13,6 @@ ktor = "2.3.1"
 
 dependencyAnalysisPlugin = "1.20.0"
 sortDependencies = "0.3"
-napt = "1.19"
 
 [plugins]
 android-app = { id = "com.android.application", version.ref = "agp" }
@@ -24,7 +23,6 @@ dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
 bestPracticesPlugin = { id = "com.autonomousapps.plugin-best-practices-plugin", version = "0.9" }
 dependencyAnalysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysisPlugin" }
 sortDependencies = { id = "com.squareup.sort-dependencies", version.ref = "sortDependencies" }
-napt = { id = "com.sergei-lapin.napt", version.ref = "napt" }
 
 [libraries]
 compose-bom = "androidx.compose:compose-bom:2023.06.00"
@@ -95,7 +93,6 @@ robolectric = "org.robolectric:robolectric:4.10.3"
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 sortDependencies-gradlePlugin = { module = "com.squareup:sort-dependencies-gradle-plugin", version.ref = "sortDependencies" }
-napt-gradlePlugin = { module = "com.sergei-lapin.napt:gradle", version.ref = "napt" }
 
 [bundles]
 kotlin-android = ["kotlin-stdlib", "kotlin-coroutine-core", "kotlin-coroutine-ui"]

@@ -26,6 +26,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
       with(pluginManager) {
         apply("com.android.application")
         apply("org.jetbrains.kotlin.android")
+        apply("org.jetbrains.kotlin.kapt")
         apply("com.squareup.sort-dependencies")
       }
 

@@ -2,7 +2,6 @@ plugins {
   id("example.android.application")
 
   alias(libs.plugins.dagger.hilt)
-  alias(libs.plugins.napt)
 }
 
 android {
@@ -55,7 +54,7 @@ dependencies {
   debugImplementation(libs.bundles.android.debug.test)
   debugImplementation(libs.leakcanary)
 
-  annotationProcessor(libs.dagger.hilt.compiler)
+  kapt(libs.dagger.hilt.compiler)
 
   testImplementation(libs.bundles.test)
 
