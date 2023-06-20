@@ -3,6 +3,7 @@ plugins {
 
   alias(libs.plugins.dagger.hilt)
   alias(libs.plugins.kotlin.serialization)
+  alias(libs.plugins.paparazzi)
 }
 
 android {
@@ -18,6 +19,8 @@ android {
 }
 
 dependencies {
+  implementation(projects.share)
+
   api(platform(libs.compose.bom))
   implementation(libs.bundles.android.ui)
 
@@ -32,4 +35,7 @@ dependencies {
 
   implementation(libs.showkase.runtime)
   ksp(libs.showkase.processor)
+
+  testImplementation(libs.android.test.runner)
+  testImplementation(libs.testParameterInjector)
 }

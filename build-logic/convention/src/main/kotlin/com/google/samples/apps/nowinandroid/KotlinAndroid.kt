@@ -22,6 +22,7 @@ import org.gradle.api.Project
 import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.provideDelegate
+import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 import java.io.File
 
@@ -71,6 +72,12 @@ internal fun Project.configureKotlinAndroid(
 
       // enable k2 compiler
       languageVersion = "2.0"
+    }
+  }
+
+  tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+      jvmTarget = "17"
     }
   }
 }
