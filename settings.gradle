@@ -24,6 +24,7 @@ dependencyResolutionManagement {
 rootProject.name = "template"
 
 include ':share'
+include ':preview-screenshots'
 include ':app'
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

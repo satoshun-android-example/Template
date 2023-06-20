@@ -14,15 +14,23 @@ ktor = "2.3.1"
 dependencyAnalysisPlugin = "1.20.0"
 sortDependencies = "0.3"
 
+paparazzi = "1.3.0"
+showkase = "1.0.0-beta18"
+testParameterInjector = "1.8"
+
+ksp = "1.9.0-Beta-1.0.11"
+
 [plugins]
 android-app = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
 bestPracticesPlugin = { id = "com.autonomousapps.plugin-best-practices-plugin", version = "0.9" }
 dependencyAnalysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysisPlugin" }
 sortDependencies = { id = "com.squareup.sort-dependencies", version.ref = "sortDependencies" }
+paparazzi = { id = "app.cash.paparazzi", version.ref = "paparazzi" }
 
 [libraries]
 compose-bom = "androidx.compose:compose-bom:2023.06.00"
@@ -89,10 +97,16 @@ leakcanary = "com.squareup.leakcanary:leakcanary-android:2.11"
 junit = "junit:junit:4.13.2"
 robolectric = "org.robolectric:robolectric:4.10.3"
 
+showkase-runtime = { group = "com.airbnb.android", name = "showkase", version.ref = "showkase" }
+showkase-processor = { group = "com.airbnb.android", name = "showkase-processor", version.ref = "showkase" }
+
+testParameterInjector = { group = "com.google.testparameterinjector", name = "test-parameter-injector", version.ref = "testParameterInjector" }
+
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 sortDependencies-gradlePlugin = { module = "com.squareup:sort-dependencies-gradle-plugin", version.ref = "sortDependencies" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 
 [bundles]
 kotlin-android = ["kotlin-stdlib", "kotlin-coroutine-core", "kotlin-coroutine-ui"]
