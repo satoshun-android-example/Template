@@ -1,5 +1,6 @@
 plugins {
   id("example.android.library")
+  id("example.android.library.compose")
 
   alias(libs.plugins.dagger.hilt)
   alias(libs.plugins.kotlin.serialization)
@@ -7,18 +8,9 @@ plugins {
 
 android {
   namespace = "io.github.satoshun.example.share"
-
-  buildFeatures {
-    compose = true
-  }
-
-  composeOptions {
-    kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
-  }
 }
 
 dependencies {
-  api(platform(libs.compose.bom))
   implementation(libs.bundles.android.ui)
 
   implementation(libs.dagger.hilt.android)

@@ -1,5 +1,6 @@
 plugins {
   id("example.android.application")
+  id("example.android.application.compose")
 
   alias(libs.plugins.dagger.hilt)
 }
@@ -28,14 +29,6 @@ android {
     )
   }
 
-  buildFeatures {
-    compose = true
-  }
-
-  composeOptions {
-    kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
-  }
-
   testOptions {
     unitTests {
       isIncludeAndroidResources = true
@@ -44,8 +37,6 @@ android {
 }
 
 dependencies {
-  api(platform(libs.compose.bom))
-
   implementation(libs.bundles.android.ui)
   implementation(libs.bundles.kotlin.android)
   implementation(libs.dagger.hilt.android)
