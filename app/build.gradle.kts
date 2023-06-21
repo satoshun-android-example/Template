@@ -1,8 +1,7 @@
 plugins {
   id("example.android.application")
   id("example.android.application.compose")
-
-  alias(libs.plugins.dagger.hilt)
+  id("example.android.dagger")
 }
 
 android {
@@ -39,13 +38,10 @@ android {
 dependencies {
   implementation(libs.bundles.android.ui)
   implementation(libs.bundles.kotlin.android)
-  implementation(libs.dagger.hilt.android)
   implementation(projects.share)
 
   debugImplementation(libs.bundles.android.debug.test)
   debugImplementation(libs.leakcanary)
-
-  kapt(libs.dagger.hilt.compiler)
 
   testImplementation(libs.bundles.test)
 
