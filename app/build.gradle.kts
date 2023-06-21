@@ -1,7 +1,7 @@
 plugins {
   id("example.android.application")
-
-  alias(libs.plugins.dagger.hilt)
+  id("example.android.application.compose")
+  id("example.android.dagger")
 }
 
 android {
@@ -28,14 +28,6 @@ android {
     )
   }
 
-  buildFeatures {
-    compose = true
-  }
-
-  composeOptions {
-    kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
-  }
-
   testOptions {
     unitTests {
       isIncludeAndroidResources = true
@@ -44,17 +36,12 @@ android {
 }
 
 dependencies {
-  api(platform(libs.compose.bom))
-
   implementation(libs.bundles.android.ui)
   implementation(libs.bundles.kotlin.android)
-  implementation(libs.dagger.hilt.android)
   implementation(projects.share)
 
   debugImplementation(libs.bundles.android.debug.test)
   debugImplementation(libs.leakcanary)
-
-  kapt(libs.dagger.hilt.compiler)
 
   testImplementation(libs.bundles.test)
 
