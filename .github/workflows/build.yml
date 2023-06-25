@@ -77,6 +77,13 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+        git fetch origin screenshots
+        git swtich screenshots
+        git add preview-screenshots/out/
+        git commit -m "add screenshots"
+        git push origin screenshots
+        git swtich -
+
     - name: Upload failure outputs
       if: failure()
       uses: actions/upload-artifact@v3
