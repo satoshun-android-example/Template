@@ -39,3 +39,34 @@ jobs:
       with:
         name: build-outputs
         path: app/build/outputs
+
+  screenshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+    - name: Cancel Previous Runs
+      uses: styfle/cancel-workflow-action@0.11.0
+      with:
+        access_token: ${{ github.token }}
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Gradle Wrapper Validation
+      uses: gradle/wrapper-validation-action@v1
+
+    - name: Setup Java
+      uses: ./.github/actions/setup-java
+      id: java
+
+    - name: Copy CI gradle.properties
+      run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
+
+    - uses: burrunan/gradle-cache-action@v1
+      name: Build
+      with:
+        gradle-dependencies-cache-key: |
+          gradle/libs.versions.toml
+        arguments: |
+          preview-screenshots:verifyPaparazziDebug
