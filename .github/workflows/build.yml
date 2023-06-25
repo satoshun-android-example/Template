@@ -71,9 +71,15 @@ jobs:
         arguments: |
           preview-screenshots:verifyPaparazziDebug
 
+    - name: Upload images
+      if: failure()
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
     - name: Upload failure outputs
       if: failure()
       uses: actions/upload-artifact@v3
       with:
-        name: failure-
+        name: failure-screenshots
         path: preview-screenshots/out/failures
