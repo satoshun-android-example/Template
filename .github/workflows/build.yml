@@ -74,15 +74,21 @@ jobs:
     - name: Upload images
       if: failure()
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        if [ -d "preview-screenshots/out/" ]; then
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-        git fetch origin screenshots
-        git swtich screenshots
-        git add preview-screenshots/out/
-        git commit -m "add screenshots"
-        git push origin screenshots
-        git swtich -
+          cp -r preview-screenshots/out screenshots
+          git fetch origin screenshots
+          git switch screenshots
+          cp -nf screenshots/* .
+          filename=`ls -1 -t screenshots | head -n 1`
+          rm -rf screenshots
+          git add .
+          git commit -m "add screenshots"
+          git push origin screenshots
+          git switch -
+        fi
 
     - name: Upload failure outputs
       if: failure()
