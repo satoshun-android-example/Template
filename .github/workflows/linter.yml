@@ -4,9 +4,7 @@ name: Run Lint
 # Start the job on all push #
 #############################
 on:
-  push:
-    branches-ignore:
-      - 'main'
+  workflow_dispatch:
 
 ###############
 # Set the Job #

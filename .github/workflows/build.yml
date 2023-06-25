@@ -70,3 +70,10 @@ jobs:
           gradle/libs.versions.toml
         arguments: |
           preview-screenshots:verifyPaparazziDebug
+
+    - name: Upload failure outputs
+      if: failure()
+      uses: actions/upload-artifact@v3
+      with:
+        name: failure-
+        path: preview-screenshots/out/failures
