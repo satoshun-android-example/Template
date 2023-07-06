@@ -60,11 +60,15 @@ jobs:
       uses: ./.github/actions/setup-java
       id: java
 
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '2.7'
+    
     - name: Copy CI gradle.properties
       run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
 
     - uses: burrunan/gradle-cache-action@v1
-      name: Build
+      name: Verify paparazzi
       with:
         gradle-dependencies-cache-key: |
           gradle/libs.versions.toml
@@ -78,17 +82,33 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          cp -r preview-screenshots/out screenshots
+          cp -r preview-screenshots/out/failures screenshots
           git fetch origin screenshots
           git switch screenshots
-          cp -nf screenshots/* .
+          mkdir -p images
+          rsync -av screenshots/ images/
+
           filename=`ls -1 -t screenshots | head -n 1`
           rm -rf screenshots
-          git add .
-          git commit -m "add screenshots"
-          git push origin screenshots
-          git switch -
+          s=`git status -s images`
+          if [ -n "$s" ]; then
+            git add images
+            git commit -m "add screenshots"
+            git push origin screenshots
+          fi
+
+          git switch - --detach
+          echo "screenshot_path=$filename" >> "$GITHUB_ENV"
         fi
+
+    - name: comment failure image
+      if: failure()
+      run: |
+        bundle install
+        danger --danger_id=failure-images --dangerfile=Dangerfile
+      env:
+        DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SCREENSHOT_PATH: https://github.com/satoshun-android-example/Template/blob/screenshots/images/${{ env.screenshot_path }}?raw=true
 
     - name: Upload failure outputs
       if: failure()
