@@ -7,7 +7,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun ShareUI() {
-  Text(text = "Shar")
+  Text(text = "ShareUI")
 }
 
 @Preview
