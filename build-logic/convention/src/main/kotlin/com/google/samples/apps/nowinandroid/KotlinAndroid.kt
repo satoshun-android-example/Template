@@ -20,10 +20,10 @@ import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.api.plugins.ExtensionAware
-import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.provideDelegate
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.io.File
 
 /**
@@ -43,35 +43,36 @@ internal fun Project.configureKotlinAndroid(
       sourceCompatibility = JavaVersion.VERSION_17
       targetCompatibility = JavaVersion.VERSION_17
     }
+    tasks.withType<KotlinCompile> {
+      kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
 
-    kotlinOptions {
-      jvmTarget = JavaVersion.VERSION_17.toString()
+        // Treat all Kotlin warnings as errors (disabled by default)
+        // Override by setting warningsAsErrors=true in your ~/.gradle/gradle.properties
+        val warningsAsErrors: String? by project
+        allWarningsAsErrors = warningsAsErrors.toBoolean()
 
-      // Treat all Kotlin warnings as errors (disabled by default)
-      // Override by setting warningsAsErrors=true in your ~/.gradle/gradle.properties
-      val warningsAsErrors: String? by project
-      allWarningsAsErrors = warningsAsErrors.toBoolean()
+        freeCompilerArgs = freeCompilerArgs + listOf(
+          "-opt-in=kotlin.RequiresOptIn",
+          // Enable experimental coroutines APIs, including Flow
+          "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+          "-opt-in=kotlinx.coroutines.FlowPreview",
+          "-opt-in=kotlin.Experimental",
+          // Enable experimental kotlinx serialization APIs
+          "-opt-in=kotlinx.serialization.ExperimentalSerializationApi",
 
-      freeCompilerArgs = freeCompilerArgs + listOf(
-        "-opt-in=kotlin.RequiresOptIn",
-        // Enable experimental coroutines APIs, including Flow
-        "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-        "-opt-in=kotlinx.coroutines.FlowPreview",
-        "-opt-in=kotlin.Experimental",
-        // Enable experimental kotlinx serialization APIs
-        "-opt-in=kotlinx.serialization.ExperimentalSerializationApi",
+          // https://mobile.twitter.com/ZacSweers/status/1520399593577582593
+          "-Xsam-conversions=class",
 
-        // https://mobile.twitter.com/ZacSweers/status/1520399593577582593
-        "-Xsam-conversions=class",
+          "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
+          "-opt-in=androidx.compose.foundation.layout.ExperimentalLayoutApi",
+        )
 
-        "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
-        "-opt-in=androidx.compose.foundation.layout.ExperimentalLayoutApi",
-      )
+        freeCompilerArgs = freeCompilerArgs + buildComposeMetricsParameters()
 
-      freeCompilerArgs = freeCompilerArgs + buildComposeMetricsParameters()
-
-      // enable k2 compiler
-      languageVersion = "2.0"
+        // enable k2 compiler
+        languageVersion = "2.0"
+      }
     }
   }
 

@@ -41,5 +41,14 @@ gradlePlugin {
       id = "example.android.dagger"
       implementationClass = "AndroidDaggerConventionPlugin"
     }
+
+    register("multiplatformCompose") {
+      id = "example.multiplatform.library"
+      implementationClass = "MultiplatformLibraryConventionPlugin"
+    }
+    register("multiplatformLibraryCompose") {
+      id = "example.multiplatform.library.compose"
+      implementationClass = "MultiplatformLibraryComposeConventionPlugin"
+    }
   }
 }

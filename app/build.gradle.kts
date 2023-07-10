@@ -36,9 +36,11 @@ android {
 }
 
 dependencies {
+  implementation(projects.share)
+  implementation(projects.share2)
+
   implementation(libs.bundles.android.ui)
   implementation(libs.bundles.kotlin.android)
-  implementation(projects.share)
 
   debugImplementation(libs.bundles.android.debug.test)
   debugImplementation(libs.leakcanary)

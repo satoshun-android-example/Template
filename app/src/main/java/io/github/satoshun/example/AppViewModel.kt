@@ -8,9 +8,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class AppViewModel @Inject constructor(
-  private val service: ExampleService,
-) : ViewModel() {
+class AppViewModel @Inject constructor() : ViewModel() {
+  private val service = ExampleService()
 
   init {
     viewModelScope.launch {

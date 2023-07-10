@@ -11,9 +11,8 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
-import javax.inject.Inject
 
-class ExampleService @Inject constructor() {
+class ExampleService {
   private val client = HttpClient(OkHttp) {
     install(ContentNegotiation) {
       json(Json {

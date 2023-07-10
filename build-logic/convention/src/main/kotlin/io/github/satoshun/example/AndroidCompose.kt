@@ -19,8 +19,25 @@ import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.withType
+import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.io.File
+
+/**
+ * Configure Compose-specific options
+ */
+internal fun Project.configureMultiplatformCompose(
+  extension: KotlinMultiplatformExtension,
+) {
+  extension.apply {
+    dependencies {
+//      val bom = libs.findLibrary("compose-bom").get()
+//      add("implementation", platform(bom))
+//      add("androidTestImplementation", platform(bom))
+    }
+  }
+}
+
 
 /**
  * Configure Compose-specific options
