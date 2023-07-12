@@ -21,5 +21,7 @@ android {
 }
 
 compose {
-  kotlinCompilerPlugin = libs.jetbrains.compose.compiler.get().version
+  kotlinCompilerPlugin.set(libs.versions.wasmCompose.get())
+  val kotlinVersion = libs.versions.kotlin.get()
+  kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=$kotlinVersion")
 }

@@ -3,6 +3,7 @@ dependencyResolutionManagement {
     google()
     mavenCentral()
     gradlePluginPortal()
+    maven(url = "https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental")
   }
   versionCatalogs {
     create("libs") {
