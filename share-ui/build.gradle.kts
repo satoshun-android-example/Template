@@ -5,13 +5,32 @@ plugins {
 
 kotlin {
   android()
+  js(IR) {
+    browser()
+  }
+  wasm {
+    browser()
+  }
 
   sourceSets {
     val commonMain by getting {
       dependencies {
-        implementation(libs.jetbrains.compose.foundation)
-        implementation(libs.jetbrains.compose.material)
+        implementation(compose.runtime)
+        implementation(compose.ui)
+        implementation(compose.foundation)
+        implementation(compose.animation)
+        implementation(compose.animationGraphics)
+        implementation(compose.material3)
+
+        @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+        implementation(compose.components.resources)
       }
+    }
+    val wasmMain by getting {
+      dependsOn(commonMain)
+    }
+    val jsMain by getting {
+      dependsOn(wasmMain)
     }
   }
 }
