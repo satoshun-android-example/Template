@@ -15,6 +15,7 @@ dependencies {
   compileOnly(libs.kotlin.gradlePlugin)
   compileOnly(libs.sortDependencies.gradlePlugin)
   compileOnly(libs.ksp.gradlePlugin)
+  compileOnly(libs.compose.gradlePlugin)
 }
 
 gradlePlugin {
@@ -49,6 +50,10 @@ gradlePlugin {
     register("multiplatformLibraryCompose") {
       id = "example.multiplatform.library.compose"
       implementationClass = "MultiplatformLibraryComposeConventionPlugin"
+    }
+    register("multiplatformApplicationCompose") {
+      id = "example.multiplatform.application.compose"
+      implementationClass = "MultiplatformApplicationComposeConventionPlugin"
     }
   }
 }

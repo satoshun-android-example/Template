@@ -1,12 +1,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-//  kotlin("plugin.serialization")
-
-//  id("example.multiplatform.library.compose")
-
-  kotlin("multiplatform")
-  id("org.jetbrains.compose")
+  id("example.multiplatform.application.compose")
 }
 
 //private val copyJsResources = tasks.create("copyJsResourcesWorkaround", Copy::class.java) {
@@ -67,10 +62,4 @@ kotlin {
 
 compose.experimental {
   web.application {}
-}
-
-compose {
-  kotlinCompilerPlugin.set(libs.versions.wasmCompose.get())
-  val kotlinVersion = libs.versions.kotlin.get()
-  kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=$kotlinVersion")
 }

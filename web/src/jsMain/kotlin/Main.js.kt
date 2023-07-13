@@ -14,6 +14,7 @@ fun main() {
         ShareUI2()
         ShareUI2()
         ShareUI2()
+        ShareUI2()
       }
     }
   }

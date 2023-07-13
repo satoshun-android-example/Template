@@ -1,6 +1,5 @@
 plugins {
-  kotlin("multiplatform")
-  id("org.jetbrains.compose")
+  id("example.multiplatform.application.compose")
 }
 
 //private val copyJsResources = tasks.create("copyJsResourcesWorkaround", Copy::class.java) {
@@ -37,10 +36,4 @@ kotlin {
 
 compose.experimental {
   web.application {}
-}
-
-compose {
-  kotlinCompilerPlugin.set(libs.versions.wasmCompose.get())
-  val kotlinVersion = libs.versions.kotlin.get()
-  kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=$kotlinVersion")
 }

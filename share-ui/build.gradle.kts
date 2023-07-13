@@ -38,9 +38,3 @@ kotlin {
 android {
   namespace = "io.github.satoshun.example.share.ui"
 }
-
-compose {
-  kotlinCompilerPlugin.set(libs.versions.wasmCompose.get())
-  val kotlinVersion = libs.versions.kotlin.get()
-  kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=$kotlinVersion")
-}

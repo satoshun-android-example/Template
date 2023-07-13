@@ -5,5 +5,5 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun ShareUI2() {
-  Text(text = "ShareUI2")
+  Text(text = "ShareUI22")
 }
