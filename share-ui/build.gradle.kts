@@ -4,7 +4,7 @@ plugins {
 }
 
 kotlin {
-  android()
+  androidTarget()
   js(IR) {
     browser()
   }
