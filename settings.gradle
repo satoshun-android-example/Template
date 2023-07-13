@@ -33,7 +33,7 @@ include ':share'
 include ':share2'
 include ':share-ui'
 include ':preview-screenshots'
-include ':webApp'
+include ':web-wasm'
 include ':app'
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

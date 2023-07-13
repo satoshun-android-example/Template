@@ -48,7 +48,7 @@ kotlin {
             add(project.rootDir.path)
             add(project.rootDir.path + "/share-ui/")
             add(project.rootDir.path + "/nonAndroidMain/")
-            add(project.rootDir.path + "/webApp/")
+            add(project.rootDir.path + "/web-wasm/")
           },
         )
       }
