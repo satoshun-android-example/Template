@@ -4,6 +4,7 @@ dependencyResolutionManagement {
     mavenCentral()
     gradlePluginPortal()
     maven(url = "https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental")
+    maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
   }
   versionCatalogs {
     create("libs") {
