@@ -1,3 +1,4 @@
+import androidx.compose.foundation.layout.Column
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.window.CanvasBasedWindow
 import io.github.satoshun.example.share.ShareUI2
@@ -7,7 +8,13 @@ import org.jetbrains.skiko.wasm.onWasmReady
 fun main() {
   onWasmReady {
     CanvasBasedWindow {
-      ShareUI2()
+      Column {
+        ShareUI2()
+        ShareUI2()
+        ShareUI2()
+        ShareUI2()
+        ShareUI2()
+      }
     }
   }
 }
