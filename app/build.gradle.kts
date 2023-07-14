@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-  implementation(projects.share)
   implementation(projects.share2)
   implementation(projects.shareUi)
 

@@ -13,8 +13,6 @@ android {
 }
 
 dependencies {
-  implementation(projects.share)
-
   implementation(libs.bundles.android.ui)
 
   implementation(libs.ktor.android)

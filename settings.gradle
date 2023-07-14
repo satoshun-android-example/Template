@@ -35,7 +35,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "template"
 
-include ':share'
 include ':share2'
 include ':share-ui'
 include ':preview-screenshots'
