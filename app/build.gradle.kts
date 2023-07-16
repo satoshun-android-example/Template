@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-  implementation(projects.share2)
+  implementation(projects.share)
   implementation(projects.shareUi)
 
   implementation(libs.bundles.android.ui)

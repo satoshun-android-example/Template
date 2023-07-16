@@ -1,6 +1,5 @@
 plugins {
   id("example.multiplatform.library")
-  id("example.multiplatform.library.compose")
 
   alias(libs.plugins.kotlin.serialization)
 }
@@ -17,12 +16,6 @@ kotlin {
   sourceSets {
     val commonMain by getting {
       dependencies {
-        implementation(compose.runtime)
-        implementation(compose.ui)
-        implementation(compose.foundation)
-        implementation(compose.animation)
-        implementation(compose.animationGraphics)
-        implementation(compose.material3)
       }
     }
 
@@ -39,5 +32,5 @@ kotlin {
 }
 
 android {
-  namespace = "io.github.satoshun.example.share2"
+  namespace = "io.github.satoshun.example.share"
 }

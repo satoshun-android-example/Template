@@ -1,3 +1,5 @@
+import org.jetbrains.compose.compose
+
 plugins {
   id("example.multiplatform.library")
   id("example.multiplatform.library.compose")
@@ -15,15 +17,22 @@ kotlin {
   sourceSets {
     val commonMain by getting {
       dependencies {
-        implementation(compose.runtime)
-        implementation(compose.ui)
-        implementation(compose.foundation)
-        implementation(compose.animation)
-        implementation(compose.animationGraphics)
-        implementation(compose.material3)
+        implementation(projects.share)
+
+        api(compose.runtime)
+        api(compose.ui)
+        api(compose.foundation)
+        api(compose.animation)
+        api(compose.animationGraphics)
+        api(compose.material3)
 
         @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
-        implementation(compose.components.resources)
+        api(compose.components.resources)
+
+        api(compose("org.jetbrains.compose.ui:ui-util"))
+        api(compose("org.jetbrains.compose.ui:ui-graphics"))
+        api(compose("org.jetbrains.compose.ui:ui-text"))
+        api(compose("org.jetbrains.compose.ui:ui-unit"))
       }
     }
     val wasmMain by getting {
