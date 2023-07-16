@@ -1,4 +1,4 @@
-package io.github.satoshun.example.share.ui
+package io.github.satoshun.example.share
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text

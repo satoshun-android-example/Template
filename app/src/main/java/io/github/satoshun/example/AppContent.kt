@@ -11,8 +11,8 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import io.github.satoshun.example.share.ShareUI
 import io.github.satoshun.example.share.ShareUI2
-import io.github.satoshun.example.share.ui.ShareUI
 import io.github.satoshun.example.theme.AppTheme
 
 @Composable

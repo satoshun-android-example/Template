@@ -1,24 +1,43 @@
 plugins {
-  id("example.android.library")
-  id("example.android.library.compose")
-  id("example.android.dagger")
+  id("example.multiplatform.library")
+  id("example.multiplatform.library.compose")
 
   alias(libs.plugins.kotlin.serialization)
 }
 
-android {
-  namespace = "io.github.satoshun.example.share"
+kotlin {
+  androidTarget()
+  js(IR) {
+    browser()
+  }
+  wasm {
+    browser()
+  }
+
+  sourceSets {
+    val commonMain by getting {
+      dependencies {
+        implementation(compose.runtime)
+        implementation(compose.ui)
+        implementation(compose.foundation)
+        implementation(compose.animation)
+        implementation(compose.animationGraphics)
+        implementation(compose.material3)
+      }
+    }
+
+    val androidMain by getting {
+      dependencies {
+        implementation(libs.ktor.android)
+        implementation(libs.ktor.okhttp)
+        implementation(libs.ktor.serialization)
+        implementation(libs.ktor.negotiation)
+        implementation(libs.ktor.json)
+      }
+    }
+  }
 }
 
-dependencies {
-  implementation(libs.bundles.android.ui)
-
-  implementation(libs.ktor.android)
-  implementation(libs.ktor.okhttp)
-  implementation(libs.ktor.serialization)
-  implementation(libs.ktor.negotiation)
-  implementation(libs.ktor.json)
-
-  implementation(libs.showkase.runtime)
-  ksp(libs.showkase.processor)
+android {
+  namespace = "io.github.satoshun.example.share2"
 }
