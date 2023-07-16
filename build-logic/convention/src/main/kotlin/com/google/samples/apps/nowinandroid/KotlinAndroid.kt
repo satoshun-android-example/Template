@@ -71,7 +71,7 @@ internal fun Project.configureKotlinAndroid(
         freeCompilerArgs = freeCompilerArgs + buildComposeMetricsParameters()
 
         // enable k2 compiler
-//        languageVersion = "2.0"
+        languageVersion = "2.0"
       }
     }
   }
