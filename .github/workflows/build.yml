@@ -31,7 +31,7 @@ jobs:
       with:
         gradle-dependencies-cache-key: |
           gradle/libs.versions.toml
-        arguments: assemble
+        arguments: assembleDebug
 
     - name: Upload build outputs
       if: always()
