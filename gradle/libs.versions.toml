@@ -58,7 +58,6 @@ compose-testing-manifest = "androidx.compose.ui:ui-test-manifest:1.5.0"
 compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
 
 compose-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
-compose-accompanist-navigation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
 compose-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanist" }
 compose-accompanist-insetsui = { module = "com.google.accompanist:accompanist-insets-ui", version.ref = "accompanist" }
 compose-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
@@ -143,7 +142,6 @@ android-ui = [
     "android-lifecycle-viewmodel-compose",
     "compose-constraint",
     "compose-accompanist-swiperefresh",
-    "compose-accompanist-navigation",
     "compose-accompanist-insets",
     "compose-accompanist-insetsui",
     "compose-accompanist-systemuicontroller",

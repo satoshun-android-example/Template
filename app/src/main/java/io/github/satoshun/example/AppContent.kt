@@ -1,38 +1,55 @@
 package io.github.satoshun.example
 
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.slideIn
+import androidx.compose.animation.slideOut
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import io.github.satoshun.example.share.ShareUI
-import io.github.satoshun.example.share.ShareUI2
+import androidx.compose.ui.unit.IntOffset
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import io.github.satoshun.example.theme.AppTheme
 
-@Composable
-fun AppContent() {
-  Scaffold { paddingValues ->
-    Row(
-      Modifier
-        .fillMaxSize()
-        .padding(paddingValues)
-    ) {
-      Column(Modifier.fillMaxSize()) {
-        TopAppBar(
-          title = {
-            Text(text = "Sample")
-          }
-        )
+@Composable fun AppContent() {
+  val navController = rememberNavController()
 
-        Text(text = "Hello World")
-        ShareUI()
-        ShareUI2()
+  NavHost(
+    navController = navController,
+    startDestination = "home",
+  ) {
+    addHome(navController)
+
+    composable(
+      "next",
+      enterTransition = {
+        slideIn(
+          initialOffset = { IntOffset(0, it.height) },
+          animationSpec = tween(2000)
+        )
+      },
+      exitTransition = {
+        slideOut(
+          targetOffset = { IntOffset(0, it.height) },
+          animationSpec = tween(7000)
+        )
+      },
+    ) {
+      Scaffold { paddingValues ->
+        Column(
+          Modifier
+            .fillMaxSize()
+            .padding(paddingValues)
+        ) {
+          Text(text = "Next")
+        }
       }
     }
   }

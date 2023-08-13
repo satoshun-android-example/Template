@@ -29,6 +29,7 @@ kotlin {
         @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
         api(compose.components.resources)
 
+        api(compose("org.jetbrains.compose.foundation:foundation-layout"))
         api(compose("org.jetbrains.compose.ui:ui-util"))
         api(compose("org.jetbrains.compose.ui:ui-graphics"))
         api(compose("org.jetbrains.compose.ui:ui-text"))
