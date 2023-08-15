@@ -1,9 +1,8 @@
-package io.github.satoshun.example
+package io.github.satoshun.example.home
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -28,20 +27,23 @@ fun NavGraphBuilder.addHome(navController: NavHostController) {
 
 @Composable
 fun Home(onNavigate: () -> Unit) {
-  Scaffold { paddingValues ->
-    Row(
-      Modifier
-        .fillMaxSize()
-        .padding(paddingValues)
+  Scaffold(
+    topBar = {
+      TopAppBar(title = {
+        Text(text = "Sample")
+      })
+    },
+  ) { paddingValues ->
+    LazyColumn(
+      modifier = Modifier.fillMaxSize(),
+      contentPadding = paddingValues
     ) {
-      Column(Modifier.fillMaxSize()) {
-        TopAppBar(title = {
-          Text(text = "Sample")
-        })
+      item { Text(text = "Hello World") }
+      item { ShareUI2() }
+      item { ShareUI(onNavigate) }
 
-        Text(text = "Hello World")
-        ShareUI2()
-        ShareUI(onNavigate)
+      items((1..100).map { it }) {
+        Text(text = "Hello World $it")
       }
     }
   }

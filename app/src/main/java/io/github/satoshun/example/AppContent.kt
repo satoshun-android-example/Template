@@ -16,9 +16,11 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import io.github.satoshun.example.home.addHome
 import io.github.satoshun.example.theme.AppTheme
 
-@Composable fun AppContent() {
+@Composable
+fun AppContent() {
   val navController = rememberNavController()
 
   NavHost(
@@ -38,7 +40,7 @@ import io.github.satoshun.example.theme.AppTheme
       exitTransition = {
         slideOut(
           targetOffset = { IntOffset(0, it.height) },
-          animationSpec = tween(7000)
+          animationSpec = tween(3000)
         )
       },
     ) {
