@@ -7,7 +7,9 @@ dagger = "2.47"
 #dagger = "HEAD-SNAPSHOT"
 
 #composeCompiler = "1.4.8"
-composeCompiler = "1.5.2"
+#composeCompiler = "1.5.2"
+composeCompiler = "1.5.3-dev-k1.9.10-593b4c95fce"
+
 #composeCompiler = "1.4.0-dev-wasm09"
 wasmCompose = "1.4.0-dev-wasm09"
 jbCompose = "1.4.1"
