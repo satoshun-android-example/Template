@@ -4,6 +4,7 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.jetbrains.compose.ComposeExtension
 
+@Suppress("unused")
 class MultiplatformApplicationComposeConventionPlugin : Plugin<Project> {
   override fun apply(target: Project) {
     with(target) {
