@@ -35,6 +35,7 @@ kotlin {
         api(compose("org.jetbrains.compose.ui:ui-text"))
         api(compose("org.jetbrains.compose.ui:ui-unit"))
         api(compose("org.jetbrains.compose.animation:animation-core"))
+        api(compose("org.jetbrains.compose.ui:ui-geometry"))
       }
     }
     val wasmMain by getting {

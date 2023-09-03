@@ -16,6 +16,7 @@ import io.github.satoshun.example.share.ShareUI
 import io.github.satoshun.example.share.ShareUI2
 import io.github.satoshun.example.share.animate.AnimateTest1
 import io.github.satoshun.example.share.animate.AnimateTest2
+import io.github.satoshun.example.share.animate.AnimateTest3
 
 fun NavGraphBuilder.addHome(navController: NavHostController) {
   navigation(route = "home", startDestination = "top") {
@@ -45,6 +46,7 @@ fun Home(onNavigate: () -> Unit) {
       item { ShareUI(onNavigate) }
       item { AnimateTest1() }
       item { AnimateTest2() }
+      item { AnimateTest3() }
 
       items((1..100).map { it }) {
         Text(text = "Hello World $it")
