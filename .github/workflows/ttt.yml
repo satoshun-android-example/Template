@@ -1,0 +1,29 @@
+name: Create Branch for release
+on:
+  workflow_dispatch:
+    inputs:
+      release-date:
+        required: true
+        type: string
+        description: 'リリース日(YYYYMMDD)'
+
+jobs:
+  release-test:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    
+    - name: Create release branch
+      run: |
+        date=${{ inputs.release-date }}
+        branch="release/v${date}"
+        echo "RELEASE_BRANCH=${branch}" >> $GITHUB_ENV
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: test
