@@ -15,7 +15,7 @@ wasmCompose = "1.4.0-dev-wasm09"
 jbCompose = "1.4.1"
 
 accompanist = "0.32.0"
-agp = "8.1.1"
+agp = "8.1.2"
 ktor = "2.3.4"
 
 dependencyAnalysisPlugin = "1.23.0"
