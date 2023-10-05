@@ -12,14 +12,15 @@ jobs:
       uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4
 
     - name: Run
+      id: test
       run: touch hoge.text
+    
+    - name: test1
+      if: ${{ steps.test.outputs.hoge != '' }}
+      run: 
+        echo "test1"
 
-    - name: TEST
-      id: cpr
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: format code by ktlint
-        title: 'Run ktlint formatter'
-        branch: format-code-by-ktlint
-        labels: enhancement
+    - name: test2
+      if: ${{ steps.test.outputs.hoge == '' }}
+      run: 
+        echo "test2"
