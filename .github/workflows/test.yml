@@ -13,14 +13,21 @@ jobs:
 
     - name: Run
       id: test
-      run: touch hoge.text
+      run: |
+        touch hoge.text
+        echo "hoge1=ttt" >> $GITHUB_OUTPUT
     
     - name: test1
-      if: ${{ steps.test.outputs.hoge != '' }}
+      if: success() && ${{ steps.test.outputs.hoge != '' }}
       run: 
         echo "test1"
 
     - name: test2
-      if: ${{ steps.test.outputs.hoge == '' }}
+      if: success() && ${{ steps.test.outputs.hoge1 == '' }}
       run: 
         echo "test2"
+
+    - name: test3
+      if: success() && ${{ steps.test.outputs.hoge1 != '' }}
+      run: 
+        echo "test3"
