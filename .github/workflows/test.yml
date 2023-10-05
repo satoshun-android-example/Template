@@ -16,18 +16,18 @@ jobs:
       run: |
         touch hoge.text
         echo "hoge1=ttt" >> $GITHUB_OUTPUT
-    
+
     - name: test1
       if: success() && ${{ steps.test.outputs.hoge != '' }}
       run: 
-        echo "test1"
+        echo "test1 ${{ steps.test.outputs.hoge }}"
 
     - name: test2
       if: success() && ${{ steps.test.outputs.hoge1 == '' }}
       run: 
-        echo "test2"
+        echo "test2 ${{ steps.test.outputs.hoge1 }}"
 
     - name: test3
       if: success() && ${{ steps.test.outputs.hoge1 != '' }}
       run: 
-        echo "test3"
+        echo "test3 ${{ steps.test.outputs.hoge1 }}"
