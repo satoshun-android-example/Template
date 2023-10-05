@@ -52,7 +52,7 @@ compose-foundation-core = { module = "androidx.compose.foundation:foundation" }
 compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
 compose-animation = { module = "androidx.compose.animation:animation" }
 compose-material = { module = "androidx.compose.material3:material3" }
-compose-testing-core = "androidx.compose.ui:ui-test:1.5.2"
+compose-testing-core = "androidx.compose.ui:ui-test:1.5.3"
 compose-testing-junit4 = "androidx.compose.ui:ui-test-junit4:1.5.2"
 compose-testing-manifest = "androidx.compose.ui:ui-test-manifest:1.5.3"
 
