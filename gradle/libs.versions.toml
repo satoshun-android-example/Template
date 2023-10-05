@@ -16,7 +16,7 @@ jbCompose = "1.4.1"
 
 accompanist = "0.32.0"
 agp = "8.1.2"
-ktor = "2.3.4"
+ktor = "2.3.5"
 
 dependencyAnalysisPlugin = "1.24.0"
 sortDependencies = "0.4"
