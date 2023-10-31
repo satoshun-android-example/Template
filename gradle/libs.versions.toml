@@ -102,7 +102,7 @@ ktor-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version
 leakcanary = "com.squareup.leakcanary:leakcanary-android:2.12"
 
 junit = "junit:junit:4.13.2"
-robolectric = "org.robolectric:robolectric:4.10.3"
+robolectric = "org.robolectric:robolectric:4.11.1"
 
 showkase-runtime = { group = "com.airbnb.android", name = "showkase", version.ref = "showkase" }
 showkase-processor = { group = "com.airbnb.android", name = "showkase-processor", version.ref = "showkase" }
