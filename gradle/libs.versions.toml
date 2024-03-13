@@ -11,7 +11,7 @@ dagger = "2.48.1"
 composeCompiler = "1.5.3"
 
 #composeCompiler = "1.4.0-dev-wasm09"
-wasmCompose = "1.4.0-dev-wasm09"
+wasmCompose = "1.6.1"
 jbCompose = "1.4.1"
 
 accompanist = "0.32.0"
