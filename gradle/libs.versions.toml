@@ -1,14 +1,14 @@
 [versions]
 #kotlin = "1.8.22"
-kotlin = "1.9.10"
-kotlincoroutines = "1.7.3"
+kotlin = "1.9.23"
+kotlincoroutines = "1.8.0"
 
 dagger = "2.48.1"
 #dagger = "HEAD-SNAPSHOT"
 
 #composeCompiler = "1.4.8"
 #composeCompiler = "1.5.2"
-composeCompiler = "1.5.3"
+composeCompiler = "1.5.11"
 
 #composeCompiler = "1.4.0-dev-wasm09"
 wasmCompose = "1.4.0-dev-wasm09"
@@ -26,7 +26,7 @@ showkase = "1.0.2"
 testParameterInjector = "1.14"
 
 #ksp = "1.8.22-1.0.11"
-ksp = "1.9.10-1.0.13"
+ksp = "1.9.23-1.0.19"
 
 [plugins]
 android-app = { id = "com.android.application", version.ref = "agp" }
